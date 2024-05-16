@@ -15,12 +15,50 @@
     <!-- Add any structured data markup here -->
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ '/' | relative_url }}">
-                    <h1 class="title">{{ site.title }}</h1>
+                    <h1 class="title has-text-white">{{ site.title }}</h1>
                 </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{ '/' | relative_url }}">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="{{ '/introduction/' | relative_url }}">
+                        Introduction
+                    </a>
+                    <a class="navbar-item" href="{{ '/installation/' | relative_url }}">
+                        Installation
+                    </a>
+                    <a class="navbar-item" href="{{ '/usage/' | relative_url }}">
+                        Usage
+                    </a>
+                    <a class="navbar-item" href="{{ '/api/' | relative_url }}">
+                        API Reference
+                    </a>
+                    <a class="navbar-item" href="{{ '/faq/' | relative_url }}">
+                        FAQ
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light" href="https://github.com/your-repo" target="_blank">
+                                <strong>GitHub</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -58,12 +96,47 @@
         </div>
     </div>
 
-    <footer>
-        <!-- Your footer content here -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>{{ site.title }}</strong> by <a href="https://yourwebsite.com">Your Name</a>. 
+                The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+            <p>
+                <a href="https://github.com/your-repo" target="_blank">GitHub</a> |
+                <a href="{{ '/contact/' | relative_url }}">Contact</a> |
+                <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+            </p>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+        });
+    </script>
 
     <!-- Optional: Link to related pages within your website -->
     <a href="related-page.html">Related Page</a>
