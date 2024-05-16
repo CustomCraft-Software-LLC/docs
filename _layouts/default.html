@@ -19,13 +19,32 @@
         <!-- Your header content here -->
     </header>
 
-    <nav>
-        <!-- Your navigation links here -->
-    </nav>
+    <div class="container is-fluid">
+        <div class="columns">
+            <nav class="column is-one-fifth sidebar">
+                <aside class="menu">
+                    <ul class="menu-list">
+                        {% for item in site.data.sidebar %}
+                            <li>
+                                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                                {% if item.children %}
+                                <ul>
+                                    {% for child in item.children %}
+                                    <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </nav>
 
-    <main>
-        {{content}}
-    </main>
+            <main class="column">
+                {{ content }}
+            </main>
+        </div>
+    </div>
 
     <footer>
         <!-- Your footer content here -->
