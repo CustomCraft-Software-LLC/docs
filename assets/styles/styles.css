@@ -12,3 +12,23 @@
     color: #363636;
     background-color: hsl(171, 100%, 96%);
 }
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 20rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#results-container {
+    list-style: none;
+    padding: 0;
+}
+
+#results-container li {
+    margin-bottom: 10px;
+}
