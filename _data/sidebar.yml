@@ -1,0 +1,16 @@
+- title: Getting Started
+  children:
+    - title: Introduction
+      url: /introduction/
+    - title: Installation
+      url: /installation/
+- title: Guides
+  children:
+    - title: Usage
+      url: /guides/usage/
+    - title: Configuration
+      url: /guides/configuration/
+- title: API Reference
+  url: /api-reference/
+- title: FAQ
+  url: /faq/
