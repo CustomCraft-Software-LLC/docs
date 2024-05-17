@@ -65,11 +65,11 @@
                     <ul class="menu-list">
                         {% for item in site.data.sidebar %}
                             <li>
-                                <a class="has-text-primary" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                                <a class="has-text-primary is-uppercase has-text-weight-bold" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                                 {% if item.children %}
                                 <ul>
                                     {% for child in item.children %}
-                                    <li><a class="has-text-primary" href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+                                    <li><a class="has-text-primary is-uppercase has-text-weight-bold" href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
                                     {% endfor %}
                                 </ul>
                                 {% endif %}
