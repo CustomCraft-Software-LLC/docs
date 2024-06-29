@@ -1,12 +1,12 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: docs
 permalink: /
 ---
-# Introduction
+
+## Introduction
 
 Welcome to the official documentation for our npm library! This page will provide an overview of the library, including how to install it, basic usage, and more.
 
@@ -16,10 +16,9 @@ This npm library is designed to help developers with [specific purpose or functi
 
 ## Installation
 
-[/install](/install/)
+[Installation Instructions](/install/)
 
-# Using npm
+### Using npm
+
+```sh
 npm install your-library-name
-
-# Using yarn
-yarn add your-library-name

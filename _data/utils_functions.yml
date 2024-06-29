@@ -8,8 +8,3 @@ children:
   - title: validatePhoneNumber()
   - title: validate()
   - title: parseJSON()
-  - title: useComponentDidMount()
-  - title: useComponentWillUnmount()
-  - title: useComponentDidUpdate()
-  - title: useIdle()
-  - title: useNetworkStatus()
