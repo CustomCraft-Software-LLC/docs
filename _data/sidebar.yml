@@ -3,14 +3,41 @@
     - title: Introduction
       url: /
     - title: Installation
-      url: /installation/
+      url: /getting-started.html
+
 - title: Guides
   children:
     - title: Usage
       url: /guides/usage/
     - title: Configuration
       url: /guides/configuration/
+    - title: Advanced Usage
+      url: /guides/advanced-usage.html
+    - title: Best Practices
+      url: /guides/best-practices.html
+    - title: Integration Guides
+      url: /guides/integration.html
+
 - title: API Reference
-  url: /api-reference/
+  children:
+    - title: Overview
+      url: /api/index.html
+    - title: Functions/Methods
+      url: /api/functions.html
+    - title: Classes
+      url: /api/classes.html
+
 - title: FAQ
-  url: /faq/
+  url: /faq.html
+
+- title: Changelog
+  url: /changelog.html
+
+- title: Contributing
+  url: /contributing.html
+
+- title: License
+  url: /license.html
+
+- title: Contact
+  url: /contact.html

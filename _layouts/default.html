@@ -32,19 +32,7 @@
         </div>
     </div>
 
-    <footer class="footer" style="background-color: #6937ff;">
-        <div class="content has-text-centered">
-          <p>
-            <strong>{{ site.title }}</strong> by <a href="https://yourwebsite.com">Your Name</a>. 
-            The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-          </p>
-          <p>
-            <a href="https://github.com/your-repo" class="has-text-primary" target="_blank">GitHub</a> |
-            <a href="{{ '/contact/' | relative_url }}" class="has-text-primary">Contact</a> |
-            <a href="{{ '/privacy-policy/' | relative_url }}" class="has-text-primary">Privacy Policy</a>
-          </p>
-        </div>
-      </footer>
+    {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.4/dist/algoliasearch-lite.umd.js"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
