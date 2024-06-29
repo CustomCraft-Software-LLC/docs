@@ -1,25 +1,27 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 title: Introduction
 permalink: /
 ---
 
-<h1>Introduction</h1>
-<br/><br/>
-<p>Welcome to the official documentation for our npm libraries! This page will provide an overview of the libraries, including how to install it, basic usage, and more.</p>
-<br/>
-<h3>What is This Library?</h3>
-<br/>
-<p>This npm libraries is designed to help developers with [specific purpose or functionality]. It offers a range of features that simplify [describe the problem it solves].</p>
-<br/>
-<h3>Installation</h3>
-<br/>
-<p><strong><a>Install</a></strong></p>
-<br/>
-<p><strong>Using npm</strong></p>
-<br/>
-<code>
-npm install @custom-craft-software/utils
-</code>
+<div class="section">
+  <h1 class="title has-text-centered has-text-primary">Introduction</h1>
+
+  <div class="content">
+    <p>Welcome to the official documentation for our npm libraries! This page will provide an overview of the libraries, including how to install it, basic usage, and more.</p>
+  </div>
+
+  <h3 class="title is-3 has-text-centered has-text-info">What is This Library?</h3>
+
+  <div class="content">
+    <p>This npm libraries is designed to help developers with [specific purpose or functionality]. It offers a range of features that simplify [describe the problem it solves].</p>
+  </div>
+
+  <h3 class="title is-3 has-text-centered has-text-info">Installation</h3>
+
+  <div class="content">
+    <p><strong><a>Install</a></strong></p>
+    <p><strong>Using npm</strong></p>
+    <pre><code>npm install @custom-craft-software/utils</code></pre>
+  </div>
+</div>
