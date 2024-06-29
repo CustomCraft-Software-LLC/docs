@@ -1,0 +1,21 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <svg width="250" height="32" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="20" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="white">CustomCraft Software Docs</text>
+          </svg>
+        </a>
+      </div>
+  
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+          {% for item in site.data.navigation %}
+          <a class="navbar-item" href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</nav>

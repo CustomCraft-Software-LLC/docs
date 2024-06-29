@@ -15,48 +15,7 @@
     <!-- Add any structured data markup here -->
 </head>
 <body>
-    <header class="navbar" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{{ '/' | relative_url }}">
-                    <h1 class="title has-text-white">{{ site.title }}</h1>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="{{ '/' | relative_url }}">
-                        Home
-                    </a>
-                    <a class="navbar-item" href="{{ '/introduction/' | relative_url }}">
-                        Introduction
-                    </a>
-                    <a class="navbar-item" href="{{ '/installation/' | relative_url }}">
-                        Installation
-                    </a>
-                    <a class="navbar-item" href="{{ '/usage/' | relative_url }}">
-                        Usage
-                    </a>
-                    <a class="navbar-item" href="{{ '/api/' | relative_url }}">
-                        API Reference
-                    </a>
-                    <a class="navbar-item" href="{{ '/faq/' | relative_url }}">
-                        FAQ
-                    </a>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-light" href="https://github.com/your-repo" target="_blank">
-                                <strong>GitHub</strong>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include navbar.html %}
 
     <div class="container is-fluid">
         <div class="columns">
@@ -66,11 +25,6 @@
 
             <main class="column">
                 <div class="container">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input is-primary" type="text" id="search-input" placeholder="Search...">
-                        </div>
-                    </div>
                     <ul id="results-container"></ul>
                     {{ content }}
                 </div>
@@ -92,6 +46,7 @@
         </div>
       </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.4/dist/algoliasearch-lite.umd.js"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 </html>
