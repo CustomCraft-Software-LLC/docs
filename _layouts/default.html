@@ -19,16 +19,18 @@
 
     <div class="container is-fluid">
         <div class="columns">
-            <nav class="column is-one-fifth sidebar">
-                {% include sidebar_menu.html %}
-            </nav>
-
-            <main class="column">
+            <div class="column is-one-fifth">
+                <nav class="sidebar">
+                    {% include sidebar_menu.html %}
+                </nav>
+            </div>
+    
+            <div class="column">
                 <div class="container">
                     <ul id="results-container"></ul>
                     {{ content }}
                 </div>
-            </main>
+            </div>
         </div>
     </div>
 
