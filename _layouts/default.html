@@ -19,12 +19,14 @@
 
     <div class="container is-fluid">
         <div class="columns">
+            <!-- Fixed Sidebar Column -->
             <div class="column is-one-fifth">
-                <nav class="panel sidebar">
+                <nav class="panel sidebar is-fixed-top">
                     {% include sidebar_menu.html %}
                 </nav>
             </div>
-    
+
+            <!-- Main Content Column -->
             <div class="column main-content">
                 <div class="container">
                     <ul id="results-container"></ul>
@@ -33,10 +35,9 @@
             </div>
         </div>
     </div>
-    
+
     {% include footer.html %}
 
-    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.4/dist/algoliasearch-lite.umd.js"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 </html>
