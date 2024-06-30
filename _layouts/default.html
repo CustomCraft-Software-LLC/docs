@@ -17,25 +17,26 @@
 <body>
     {% include navbar.html %}
 
-    <div class="container is-fluid">
+    <div class="container">
         <div class="columns">
-            <!-- Main Content Column -->
-            <div class="column">
+            <!-- Fixed Sidebar Column (1/5 width) -->
+            <div class="column is-one-fifth">
+                <nav class="sidebar is-fixed-top">
+                    {% include sidebar_menu.html %}
+                </nav>
+            </div>
+
+            <!-- Main Content Column (4/5 width) -->
+            <div class="column is-four-fifths">
                 <div class="container">
                     <ul id="results-container"></ul>
                     {{ content }}
                 </div>
             </div>
-
-            <!-- Fixed Sidebar Column -->
-            <div class="column is-one-fifth">
-                <nav class="sidebar is-fixed-bottom" style="background: white;">
-                    {% include sidebar_menu.html %}
-                </nav>
-            </div>
         </div>
     </div>
 
+    <!--Bottom-->
     {% include footer.html %}
 
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
