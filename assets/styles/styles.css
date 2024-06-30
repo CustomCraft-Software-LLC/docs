@@ -13,16 +13,29 @@
 
 .sidebar {
     position: fixed;
-    top: 3.25rem; /* Adjust this value to match your navbar height */
-    bottom: 3.25rem; /* Adjust this value to match your footer height */
+    bottom: 0;
     left: 0;
     width: 20%; /* Adjust the width of the sidebar as needed */
+    top: 3.25rem; /* Adjust this value to match your navbar height */
     overflow-y: auto; /* Enable scrolling if sidebar content exceeds its height */
+    border-right: 1px solid #ccc; /* Optional: Add a border for separation */
+    background-color: white;
+    z-index: 10; /* Ensure sidebar is above other content */
 }
 
 .main-content {
-    margin-left: 20%; /* Ensure main content area doesn't overlap with fixed sidebar */
+    margin-right: 20%; /* Ensure main content area doesn't overlap with fixed sidebar */
     padding: 1rem; /* Optional: Add padding to the main content */
+}
+
+/* Adjust sidebar background when scrolling */
+.sidebar.scrolled {
+    top: 3.25rem; /* Adjust this value to match your navbar height */
+}
+
+/* Ensure navbar z-index is higher than sidebar */
+.navbar {
+    z-index: 20;
 }
 
 @media screen and (max-width: 1024px) {
@@ -34,7 +47,7 @@
     }
 
     .main-content {
-        margin-left: 0; /* Reset margin on smaller screens */
+        margin-right: 0; /* Reset margin on smaller screens */
         padding: 0.75rem; /* Adjust padding for smaller screens */
     }
 }

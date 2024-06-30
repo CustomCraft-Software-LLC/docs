@@ -19,19 +19,19 @@
 
     <div class="container is-fluid">
         <div class="columns">
-            <!-- Fixed Sidebar Column -->
-            <div class="column is-one-fifth">
-                <nav class="panel sidebar is-fixed-top">
-                    {% include sidebar_menu.html %}
-                </nav>
-            </div>
-
             <!-- Main Content Column -->
-            <div class="column main-content">
+            <div class="column">
                 <div class="container">
                     <ul id="results-container"></ul>
                     {{ content }}
                 </div>
+            </div>
+
+            <!-- Fixed Sidebar Column -->
+            <div class="column is-one-fifth">
+                <nav class="sidebar is-fixed-bottom" style="background: white;">
+                    {% include sidebar_menu.html %}
+                </nav>
             </div>
         </div>
     </div>
