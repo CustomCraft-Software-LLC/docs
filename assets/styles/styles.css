@@ -1,7 +1,17 @@
 .sidebar {
-    padding: 1rem;
-    border-right: 1px solid #ddd;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%; /* Adjust the width of the sidebar */
+    overflow-y: auto; /* Enable scrolling if sidebar content exceeds viewport height */
+    padding-top: 1.5rem; /* Adjust top padding as needed */
+    border-right: 1px solid #dbdbdb; /* Optional: Add a border for separation */
+}
+
+.main-content {
+    margin-left: 20%; /* Ensure main content area doesn't overlap with fixed sidebar */
+    padding: 1rem; /* Optional: Add padding to the main content */
 }
 
 .menu-list a {

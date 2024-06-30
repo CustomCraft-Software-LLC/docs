@@ -20,12 +20,12 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-one-fifth">
-                <nav class="sidebar">
+                <nav class="panel sidebar">
                     {% include sidebar_menu.html %}
                 </nav>
             </div>
     
-            <div class="column">
+            <div class="column main-content">
                 <div class="container">
                     <ul id="results-container"></ul>
                     {{ content }}
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-
+    
     {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.4/dist/algoliasearch-lite.umd.js"></script>
