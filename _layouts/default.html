@@ -19,17 +19,14 @@
 
     <div class="container">
         <div class="columns">
-            <!-- Fixed Sidebar Column (1/5 width) -->
             <div class="column is-one-fifth">
-                <nav class="sidebar is-fixed-top">
+                <nav class="sidebar">
                     {% include sidebar_menu.html %}
                 </nav>
             </div>
 
-            <!-- Main Content Column (4/5 width) -->
             <div class="column is-four-fifths">
                 <div class="container">
-                    <ul id="results-container"></ul>
                     {{ content }}
                 </div>
             </div>

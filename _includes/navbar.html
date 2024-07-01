@@ -1,21 +1,33 @@
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="container">
+<header class="header">
+  <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <svg width="285" height="32" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="20" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="white">CustomCraft Software Docs</text>
-          </svg>
-        </a>
-      </div>
-  
-      <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-start">
-          {% for item in site.data.navigation %}
-          <a class="navbar-item" href="{{ item.url }}">
-            {{ item.title }}
+          <a class="navbar-item" href="{{ '/' | relative_url }}">
+              MyWebsite
           </a>
-          {% endfor %}
-        </div>
       </div>
-    </div>
-</nav>
+      <div class="navbar-menu">
+          <div class="navbar-start">
+              <a class="navbar-item" href="{{ '/' | relative_url }}">Home</a>
+              <a class="navbar-item" href="{{ '/about/' | relative_url }}">About</a>
+              <a class="navbar-item" href="{{ '/services/' | relative_url }}">Services</a>
+              <a class="navbar-item" href="{{ '/contact/' | relative_url }}">Contact</a>
+          </div>
+          <div class="navbar-end">
+              <div class="navbar-item">
+                  <form action="/search" method="get">
+                      <div class="field has-addons">
+                          <div class="control">
+                              <input class="input" type="text" name="q" placeholder="Search">
+                          </div>
+                          <div class="control">
+                              <button class="button is-info" type="submit">Search</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <a class="navbar-item" href="https://github.com/your-repo" target="_blank">GitHub</a>
+              <a class="navbar-item" href="https://example.com" target="_blank">Redirect Site</a>
+          </div>
+      </div>
+  </nav>
+</header>

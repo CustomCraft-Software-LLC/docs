@@ -6,31 +6,3 @@
     color: #363636;
     background-color: hsl(171, 100%, 96%);
 }
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Ensure navbar is above other content */
-}
-
-.sidebar {
-    position: fixed;
-    top: 3.25rem; /* Adjust this value to match your navbar height */
-    bottom: 0;
-    left: 0;
-    width: 20%; /* Adjust the width of the sidebar as needed */
-    overflow-y: auto; /* Enable scrolling if sidebar content exceeds its height */
-    background-color: white; /* Sidebar background color */
-    border-right: 1px solid #ccc; /* Optional: Add a border for separation */
-    z-index: 5; /* Ensure sidebar is above main content */
-}
-
-.column {
-    padding-top: 3.25rem; /* Adjust padding to accommodate fixed navbar */
-}
-
-.main-content {
-    padding: 1rem; /* Optional: Add padding to the main content */
-}
