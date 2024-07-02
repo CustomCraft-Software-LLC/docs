@@ -2,10 +2,10 @@
   url: /
 - title: Installation
   url: /installation/
-- title: Guides
+- title: Examples
   url: /guides/
-- title: Api Reference
-  url: /api-reference/
+- title: Library
+  url: /utils/
 - title: FAQ
   url: /faq/
 - title: Changelog
