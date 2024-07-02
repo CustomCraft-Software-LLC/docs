@@ -18,12 +18,12 @@
     - title: Integration Guides
       url: /guides/integration.html
 
-- title: Library Reference
+- title: custom-craft-software/utils
   children:
     - title: Overview
-      url: /api/
+      url: /utils/
     - title: Functions/Methods
-      url: /api/functions/
+      url: /utils/functions/
 
 - title: FAQ
   url: /faq/
