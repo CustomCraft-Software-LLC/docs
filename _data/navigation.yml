@@ -1,8 +1,16 @@
-- title: Home
+- title: Instroduction
   url: /
 - title: Installation
   url: /installation/
-- title: Examples
-  url: /examples/
+- title: Guides
+  url: /guides/
+- title: Api Reference
+  url: /api-reference/
+- title: FAQ
+  url: /faq/
+- title: Changelog
+  url: /changelog/
+- title: License
+  url: /license/
 - title: Contact
   url: /contact/

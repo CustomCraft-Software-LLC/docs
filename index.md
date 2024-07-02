@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="section">
-  <h1 class="title has-text-centered has-text-primary">Introduction</h1>
+  <h1 class="title has-text-centered" style="color:#6935FF">Introduction</h1>
 
   <div class="content">
     <p>Welcome to the official documentation for our npm libraries! This page will provide an overview of the libraries, including how to install it, basic usage, and more.</p>

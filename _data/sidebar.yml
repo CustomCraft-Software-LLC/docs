@@ -3,7 +3,7 @@
     - title: Introduction
       url: /
     - title: Installation
-      url: /getting-started.html
+      url: /installation/
 
 - title: Guides
   children:
@@ -18,26 +18,21 @@
     - title: Integration Guides
       url: /guides/integration.html
 
-- title: API Reference
+- title: Library Reference
   children:
     - title: Overview
-      url: /api/index.html
+      url: /api/
     - title: Functions/Methods
-      url: /api/functions.html
-    - title: Classes
-      url: /api/classes.html
+      url: /api/functions/
 
 - title: FAQ
-  url: /faq.html
+  url: /faq/
 
 - title: Changelog
-  url: /changelog.html
-
-- title: Contributing
-  url: /contributing.html
+  url: /changelog/
 
 - title: License
-  url: /license.html
+  url: /license/
 
 - title: Contact
-  url: /contact.html
+  url: /contact/
