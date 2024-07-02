@@ -6,7 +6,7 @@
       <div class="navbar-menu">
 			<div class="navbar-start">
 				{% for nav_item in site.data.navigation %}
-					<a class="navbar-item" href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
+					<a class="navbar-item secondary-text" href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
 				{% endfor %}
           </div>
           <div class="navbar-end">
@@ -17,7 +17,7 @@
                               <input class="input" type="text" name="search" placeholder="Search">
                           </div>
                           <div class="control">
-                              <button class="button is-info" type="submit">Search</button>
+                              <button class="button" type="submit">Search</button>
                           </div>
                       </div>
                   </form>

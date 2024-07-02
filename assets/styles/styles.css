@@ -1,16 +1,23 @@
-.menu-list a {
-    color: #ddd;
+a {
+    color: rgba(0, 15, 105, 0.69) !important;
 }
 
-.menu-list a:hover {
-    color: #363636;
-    background-color: hsl(171, 100%, 96%);
+a:hover {
+    color: #FFFFFF !important;
+    background-color: #6937FF;
 }
 
 .primary-text { 
-    color: #6935FF;
+    color: #6937FF;
 }
 
 .secondary-text { 
-    color: #6935FF;
+    color: rgba(0, 15, 105, 0.69);
+}
+
+.custom-box {
+    background-color: #000000;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
