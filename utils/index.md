@@ -1,6 +1,7 @@
 ---
-title: Overview
 layout: default
+title: Overview
+permalink: /utils/
 ---
 
 # Overview

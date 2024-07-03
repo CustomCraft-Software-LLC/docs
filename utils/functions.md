@@ -1,9 +1,10 @@
 ---
-title: Functions/Methods
 layout: default
+title: Functions
+permalink: /utils/functions/
 ---
 
-# Functions/Methods
+# Functions
 
 This section details the functions and methods provided by the Custom Craft Software utils module. Below are some of the key utility functions available, grouped by category.
 

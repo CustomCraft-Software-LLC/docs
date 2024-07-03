@@ -1,4 +1,5 @@
 - title: Getting Started
+  url: /
   children:
     - title: Introduction
       url: /
@@ -6,6 +7,7 @@
       url: /installation/
 
 - title: Examples
+  url: /examples/
   children:
     - title: Overview
       url: /examples/
@@ -13,6 +15,7 @@
       url: /examples/functions/
 
 - title: custom-craft-software/utils
+  url: /utils/
   children:
     - title: Overview
       url: /utils/
