@@ -1,30 +1,39 @@
 <header class="header">
-  <nav class="navbar">
-      <div class="navbar-brand">
-			CustomCraft Software, LLC
-      </div>
-      <div class="navbar-menu">
-			<div class="navbar-start">
-				{% for nav_item in site.data.navigation %}
-					<a class="navbar-item secondary-text" href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
-				{% endfor %}
-          </div>
-          <div class="navbar-end">
-              <div class="navbar-item">
-                  <form action="/search" method="get">
-                      <div class="field has-addons">
-                          <div class="control">
-                              <input class="input" type="text" name="search" placeholder="Search">
-                          </div>
-                          <div class="control">
-                              <button class="button" type="submit">Search</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <a class="navbar-item" href="https://github.com/your-repo" target="_blank">GitHub</a>
-              <a class="navbar-item" href="https://example.com" target="_blank">Redirect Site</a>
-          </div>
-      </div>
-  </nav>
+    <nav class="navbar is-light">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                CustomCraft Software, LLC
+            </a>
+            <div class="navbar-burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                {% for nav_item in site.data.navigation %}
+                    <a class="navbar-item secondary-text" href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
+                {% endfor %}
+            </div>
+            <div class="navbar-end">
+                <!--
+                <div class="navbar-item">
+                    <form action="/search" method="get">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input class="input" type="text" name="search" placeholder="Search">
+                            </div>
+                            <div class="control">
+                                <button class="button primary-text" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                -->
+                <a class="navbar-item" href="https://github.com/CustomCraft-Software-LLC/ccs" target="_blank">GitHub</a>
+                <a class="navbar-item" href="https://customcraftsoftware.com" target="_blank">Go to CustomCraft Software</a>
+            </div>
+        </div>
+    </nav>
 </header>
