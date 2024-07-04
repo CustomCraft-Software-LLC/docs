@@ -69,37 +69,55 @@ functions:
     returns:
       type: boolean
       description: "Returns true if phone number is valid"
+  - name: parseJSON
+    description: "Parse JSON string into object"
+    params:
+      - name: json
+        type: string
+        description: "JSON string to be parsed"
+    returns: 
+      type: any
+      description: "Parsed object"
 
-/**
- * parseJSON - parse JSON string into object
- * @param {string} json 
- * @returns {any}
- */
-export const parseJSON = (json: string) : any => { 
+  - name: sortTable
+    description: "Sort table"
+    params:
+      - name: table
+        type: number[]
+        description: "Array of numbers to be sorted"
+    returns:
+      type: number[]
+      description: "Sorted array of numbers"
 
-/**
- * sortTable - sort table 
- * @param {number[]} table 
- * @returns {number[]}
- */
-export const sortTable = (table : number[]): number[] => { 
+  - name: formatText
+    description: "Format HTML string to be formatted HTML string list"
+    params:
+      - name: text
+        type: string
+        description: "Text to be formatted"
+    returns:
+      type: any
+      description: "Formatted text list"
 
-/**
- * formatText - html string to be formatted html string list
- * @param {string} text 
- * @returns 
- */
-export const formatText = (text: string) => { 
+  - name: setCookie
+    description: "Set a cookie"
+    params:
+      - name: name
+        type: string
+        description: "Name of the cookie"
+      - name: expDate
+        type: number
+        description: "Expiration date of the cookie"
+    returns:
+      type: void
+      description: "No return value"
 
-/**
- * setCookie - set a cookie
- * @param {string} name 
- * @param {number} expDate 
- */
-export const setCookie = (name : string, expDate : number) => {
-
-/**
- * removeCookie - remove a cookie
- * @param {string} name 
- */
-export const removeCookie = (name : string) => {
+  - name: removeCookie
+    description: "Remove a cookie"
+    params:
+      - name: name
+        type: string
+        description: "Name of the cookie to be removed"
+    returns:
+      type: void
+      description: "No return value"

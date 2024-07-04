@@ -1,64 +1,182 @@
 ---
+title: Utility Functions Documentation
 layout: default
-title: Functions
-permalink: /utils/functions/
+
+functions:
+  - name: validateContactForm
+    description: "Takes user data and validates contact form"
+    params:
+      - name: formData
+        type: FormData
+        description: "Takes formData"
+    returns: 
+      type: Errors
+      description: "Returns validation errors"
+  - name: validateEmail
+    description: "Validate email"
+    params:
+      - name: email
+        type: string
+        description: "Email to be validated"
+    returns:
+      type: boolean
+      description: "Returns true if email is valid"
+  - name: validatePassword
+    description: "Validate password with given regex"
+    params:
+      - name: password
+        type: string
+        description: "Password to be validated"
+      - name: regex
+        type: RegExp
+        description: "Regex pattern to validate password"
+    returns:
+      type: boolean
+      description: "Returns true if password matches the regex"
+  - name: validatePhoneNumber
+    description: "Validate phone number"
+    params:
+      - name: phoneNumber
+        type: string
+        description: "Phone number to be validated"
+    returns:
+      type: boolean
+      description: "Returns true if phone number is valid"
+  - name: parseJSON
+    description: "Parse JSON string into object"
+    params:
+      - name: json
+        type: string
+        description: "JSON string to be parsed"
+    returns: 
+      type: any
+      description: "Parsed object"
+  - name: sortTable
+    description: "Sort table"
+    params:
+      - name: table
+        type: number[]
+        description: "Array of numbers to be sorted"
+    returns:
+      type: number[]
+      description: "Sorted array of numbers"
+  - name: formatText
+    description: "Format HTML string to be formatted HTML string list"
+    params:
+      - name: text
+        type: string
+        description: "Text to be formatted"
+    returns:
+      type: any
+      description: "Formatted text list"
+  - name: setCookie
+    description: "Set a cookie"
+    params:
+      - name: name
+        type: string
+        description: "Name of the cookie"
+      - name: expDate
+        type: number
+        description: "Expiration date of the cookie"
+    returns:
+      type: void
+      description: "No return value"
+  - name: removeCookie
+    description: "Remove a cookie"
+    params:
+      - name: name
+        type: string
+        description: "Name of the cookie to be removed"
+    returns:
+      type: void
+      description: "No return value"
 ---
 
-## Represents FormData
 
-| Field         | Description                |
-| ------------- | -------------------------- |
-| first_name    | The first name submitted   |
-| last_name     | The last name submitted    |
-| email         | The email submitted        |
-| phone_number  | The phone number submitted |
-| message       | The message submitted      |
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ page.title }}</h1>
 
-## Represents Error Messages
+    <h2 class="subtitle">Represents FormData</h2>
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>first_name</td>
+          <td>The first name submitted</td>
+        </tr>
+        <tr>
+          <td>last_name</td>
+          <td>The last name submitted</td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td>The email submitted</td>
+        </tr>
+        <tr>
+          <td>phone_number</td>
+          <td>The phone number submitted</td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td>The message submitted</td>
+        </tr>
+      </tbody>
+    </table>
 
-| Field         | Description                      |
-| ------------- | -------------------------------- |
-| first_name    | The first name error message     |
-| last_name     | The last name error message      |
-| email         | The email error message          |
-| phone_number  | The phone number error message   |
-| message       | The message error message        |
+    <h2 class="subtitle">Represents Error Messages</h2>
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>first_name</td>
+          <td>The first name error message</td>
+        </tr>
+        <tr>
+          <td>last_name</td>
+          <td>The last name error message</td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td>The email error message</td>
+        </tr>
+        <tr>
+          <td>phone_number</td>
+          <td>The phone number error message</td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td>The message error message</td>
+        </tr>
+      </tbody>
+    </table>
 
-## Functions
+    <h2 class="subtitle">Functions</h2>
 
-### validateContactForm
-**Description:** Takes user data and validates contact form
+    {% for function in page.functions %}
+    <div class="box">
+      <h3 class="title is-4">{{ function.name }}</h3>
+      <p><strong>Description:</strong> {{ function.description }}</p>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        {% for param in function.params %}
+        <li><strong>{{ param.name }}</strong> ({{ param.type }}): {{ param.description }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Returns:</strong></p>
+      <p>{{ function.returns.type }}: {{ function.returns.description }}</p>
+    </div>
+    {% endfor %}
 
-**Parameters:**
-- `formData` (FormData): Takes formData
-
-**Returns:** 
-- `Errors`: Returns validation errors
-
-### validateEmail
-**Description:** Validate email
-
-**Parameters:**
-- `email` (string): Email to be validated
-
-**Returns:** 
-- `boolean`: Returns true if email is valid
-
-### validatePassword
-**Description:** Validate password with given regex
-
-**Parameters:**
-- `password` (string): Password to be validated
-- `regex` (RegExp): Regex pattern to validate password
-
-**Returns:** 
-- `boolean`: Returns true if password matches the regex
-
-### validatePhoneNumber
-**Description:** Validate phone number
-
-**Parameters:**
-- `phoneNumber` (string): Phone number to be validated
-
-**Returns:** 
-- `boolean`: Returns true if phone number is valid
+  </div>
+</section>
