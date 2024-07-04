@@ -174,7 +174,7 @@ functions:
         <p class="secondary-text"><strong class="secondary-text">Returns:</strong> {{ function.returns.type }}: {{ function.returns.description }}</p>
         {% if function.example %}
         <p><strong class="secondary-text">Example:</strong></p>
-        <pre class="custom-box"><code class="secondary-text">{{ function.example }}</code></pre>
+        <pre class="custom-box"><code class="primary-text">{{ function.example }}</code></pre>
         {% endif %}
         </div>
     {% endfor %}

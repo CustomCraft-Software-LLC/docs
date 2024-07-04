@@ -9,7 +9,7 @@
 
     <!-- CSS stylesheets and other resources can be linked here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
     <!-- Add your JavaScript files here -->
     
     <!-- Add any structured data markup here -->
@@ -35,7 +35,5 @@
 
     <!--Bottom-->
     {% include footer.html %}
-
-    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 </html>
