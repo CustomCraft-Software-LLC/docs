@@ -1,6 +1,7 @@
 ---
 title: Utility Functions Documentation
 layout: default
+permalink: /utils/functions/
 
 functions:
   - name: validateContactForm
@@ -95,86 +96,86 @@ functions:
 
 <section class="section">
   <div class="container">
-    <h1 class="title">{{ page.title }}</h1>
+    <h1 class="title primary-text">{{ page.title }}</h1>
 
-    <h2 class="subtitle">Represents FormData</h2>
-    <table class="table is-striped is-hoverable">
+    <h2 class="subtitle secondary-text">Represents FormData</h2>
+    <table class="table">
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th class="secondary-text">Field</th>
+          <th class="secondary-text">Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>first_name</td>
-          <td>The first name submitted</td>
+          <td class="secondary-text">first_name</td>
+          <td class="secondary-text">The first name submitted</td>
         </tr>
         <tr>
-          <td>last_name</td>
-          <td>The last name submitted</td>
+          <td class="secondary-text">last_name</td>
+          <td class="secondary-text">The last name submitted</td>
         </tr>
         <tr>
-          <td>email</td>
-          <td>The email submitted</td>
+          <td class="secondary-text">email</td>
+          <td class="secondary-text">The email submitted</td>
         </tr>
         <tr>
-          <td>phone_number</td>
-          <td>The phone number submitted</td>
+          <td class="secondary-text">phone_number</td>
+          <td class="secondary-text">The phone number submitted</td>
         </tr>
         <tr>
-          <td>message</td>
-          <td>The message submitted</td>
+          <td class="secondary-text">message</td>
+          <td class="secondary-text">The message submitted</td>
         </tr>
       </tbody>
     </table>
 
-    <h2 class="subtitle">Represents Error Messages</h2>
-    <table class="table is-striped is-hoverable">
+    <h2 class="subtitle secondary-text">interface Error</h2>
+    <table class="table">
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th class="secondary-text">Field</th>
+          <th class="secondary-text">Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>first_name</td>
-          <td>The first name error message</td>
+          <td class="secondary-text">first_name</td>
+          <td class="secondary-text">The first name error message</td>
         </tr>
         <tr>
-          <td>last_name</td>
-          <td>The last name error message</td>
+          <td class="secondary-text">last_name</td>
+          <td class="secondary-text">The last name error message</td>
         </tr>
         <tr>
-          <td>email</td>
-          <td>The email error message</td>
+          <td class="secondary-text">email</td>
+          <td class="secondary-text">The email error message</td>
         </tr>
         <tr>
-          <td>phone_number</td>
-          <td>The phone number error message</td>
+          <td class="secondary-text">phone_number</td>
+          <td class="secondary-text">The phone number error message</td>
         </tr>
         <tr>
-          <td>message</td>
-          <td>The message error message</td>
+          <td class="secondary-text">message</td>
+          <td class="secondary-text">The message error message</td>
         </tr>
       </tbody>
     </table>
 
-    <h2 class="subtitle">Functions</h2>
+    <h2 class="subtitle secondary-text">Functions</h2>
 
     {% for function in page.functions %}
     <div class="box">
-      <h3 class="title is-4">{{ function.name }}</h3>
-      <p><strong>Description:</strong> {{ function.description }}</p>
-      <p><strong>Parameters:</strong></p>
+      <h3 class="title is-4 secondary-text">{{ function.name }}</h3>
+      <p class="secondary-text"><strong class="secondary-text">Description:</strong> {{ function.description }}</p>
+      <p class="secondary-text"><strong class="secondary-text">Parameters:</strong></p>
       <ul>
         {% for param in function.params %}
-        <li><strong>{{ param.name }}</strong> ({{ param.type }}): {{ param.description }}</li>
+        <li class="secondary-text"><strong class="secondary-text">{{ param.name }}</strong> ({{ param.type }}): {{ param.description }}</li>
         {% endfor %}
       </ul>
-      <p><strong>Returns:</strong></p>
-      <p>{{ function.returns.type }}: {{ function.returns.description }}</p>
+      <p><strong class="secondary-text">Returns:</strong></p>
+      <p class="secondary-text">{{ function.returns.type }}: {{ function.returns.description }}</p>
     </div>
     {% endfor %}
 
