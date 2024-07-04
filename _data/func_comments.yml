@@ -1,0 +1,105 @@
+---
+title: Contact Form Validation
+---
+
+# Represents FormData
+FormData:
+  first_name: 
+    description: "The first name submitted"
+  last_name: 
+    description: "The last name submitted"
+  email: 
+    description: "The email submitted"
+  phone_number: 
+    description: "The phone number submitted"
+  message: 
+    description: "The message submitted"
+
+# Represents Error Messages
+Errors:
+  first_name: 
+    description: "The first name error message"
+  last_name: 
+    description: "The last name error message"
+  email: 
+    description: "The email error message"
+  phone_number: 
+    description: "The phone number error message"
+  message: 
+    description: "The message error message"
+
+# Functions
+functions:
+  - name: validateContactForm
+    description: "Takes user data and validates contact form"
+    params:
+      - name: formData
+        type: FormData
+        description: "Takes formData"
+    returns: 
+      type: Errors
+      description: "Returns validation errors"
+  - name: validateEmail
+    description: "Validate email"
+    params:
+      - name: email
+        type: string
+        description: "Email to be validated"
+    returns:
+      type: boolean
+      description: "Returns true if email is valid"
+  - name: validatePassword
+    description: "Validate password with given regex"
+    params:
+      - name: password
+        type: string
+        description: "Password to be validated"
+      - name: regex
+        type: RegExp
+        description: "Regex pattern to validate password"
+    returns:
+      type: boolean
+      description: "Returns true if password matches the regex"
+  - name: validatePhoneNumber
+    description: "Validate phone number"
+    params:
+      - name: phoneNumber
+        type: string
+        description: "Phone number to be validated"
+    returns:
+      type: boolean
+      description: "Returns true if phone number is valid"
+
+/**
+ * parseJSON - parse JSON string into object
+ * @param {string} json 
+ * @returns {any}
+ */
+export const parseJSON = (json: string) : any => { 
+
+/**
+ * sortTable - sort table 
+ * @param {number[]} table 
+ * @returns {number[]}
+ */
+export const sortTable = (table : number[]): number[] => { 
+
+/**
+ * formatText - html string to be formatted html string list
+ * @param {string} text 
+ * @returns 
+ */
+export const formatText = (text: string) => { 
+
+/**
+ * setCookie - set a cookie
+ * @param {string} name 
+ * @param {number} expDate 
+ */
+export const setCookie = (name : string, expDate : number) => {
+
+/**
+ * removeCookie - remove a cookie
+ * @param {string} name 
+ */
+export const removeCookie = (name : string) => {

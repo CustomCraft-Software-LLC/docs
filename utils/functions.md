@@ -4,21 +4,61 @@ title: Functions
 permalink: /utils/functions/
 ---
 
-# Functions
+## Represents FormData
 
-This section details the functions and methods provided by the Custom Craft Software utils module. Below are some of the key utility functions available, grouped by category.
+| Field         | Description                |
+| ------------- | -------------------------- |
+| first_name    | The first name submitted   |
+| last_name     | The last name submitted    |
+| email         | The email submitted        |
+| phone_number  | The phone number submitted |
+| message       | The message submitted      |
 
-## String Utilities
+## Represents Error Messages
 
-### `capitalize`
+| Field         | Description                      |
+| ------------- | -------------------------------- |
+| first_name    | The first name error message     |
+| last_name     | The last name error message      |
+| email         | The email error message          |
+| phone_number  | The phone number error message   |
+| message       | The message error message        |
 
-Converts the first character of a string to uppercase and the remaining characters to lowercase.
+## Functions
 
-**Example:**
+### validateContactForm
+**Description:** Takes user data and validates contact form
 
-```javascript
-import { capitalize } from '@custom-craft-software/utils';
+**Parameters:**
+- `formData` (FormData): Takes formData
 
-const title = 'hello world';
-const capitalizedTitle = capitalize(title);
-console.log(capitalizedTitle); // Output: 'Hello World'
+**Returns:** 
+- `Errors`: Returns validation errors
+
+### validateEmail
+**Description:** Validate email
+
+**Parameters:**
+- `email` (string): Email to be validated
+
+**Returns:** 
+- `boolean`: Returns true if email is valid
+
+### validatePassword
+**Description:** Validate password with given regex
+
+**Parameters:**
+- `password` (string): Password to be validated
+- `regex` (RegExp): Regex pattern to validate password
+
+**Returns:** 
+- `boolean`: Returns true if password matches the regex
+
+### validatePhoneNumber
+**Description:** Validate phone number
+
+**Parameters:**
+- `phoneNumber` (string): Phone number to be validated
+
+**Returns:** 
+- `boolean`: Returns true if phone number is valid
