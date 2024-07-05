@@ -96,36 +96,36 @@ functions:
 
 <section class="section">
   <div class="container">
-    <h1 class="title primary-text">{{ page.title }}</h1>
+    <h1 class="title primary-text has-text-centered">{{ page.title }}</h1>
 
-    <h2 class="subtitle secondary-text">Represents FormData</h2>
+    <h2 class="subtitle secondary-text">interface FormData</h2>
     <table class="table">
       <thead>
         <tr>
-          <th class="secondary-text">Field</th>
-          <th class="secondary-text">Description</th>
+          <th>Field</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="secondary-text">first_name</td>
-          <td class="secondary-text">The first name submitted</td>
+          <td>first_name</td>
+          <td>The first name submitted</td>
         </tr>
         <tr>
-          <td class="secondary-text">last_name</td>
-          <td class="secondary-text">The last name submitted</td>
+          <td>last_name</td>
+          <td>The last name submitted</td>
         </tr>
         <tr>
-          <td class="secondary-text">email</td>
-          <td class="secondary-text">The email submitted</td>
+          <td>email</td>
+          <td>The email submitted</td>
         </tr>
         <tr>
-          <td class="secondary-text">phone_number</td>
-          <td class="secondary-text">The phone number submitted</td>
+          <td>phone_number</td>
+          <td>The phone number submitted</td>
         </tr>
         <tr>
-          <td class="secondary-text">message</td>
-          <td class="secondary-text">The message submitted</td>
+          <td>message</td>
+          <td>The message submitted</td>
         </tr>
       </tbody>
     </table>
@@ -134,35 +134,35 @@ functions:
     <table class="table">
       <thead>
         <tr>
-          <th class="secondary-text">Field</th>
-          <th class="secondary-text">Description</th>
+          <th>Field</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="secondary-text">first_name</td>
-          <td class="secondary-text">The first name error message</td>
+          <td>first_name</td>
+          <td>The first name error message</td>
         </tr>
         <tr>
-          <td class="secondary-text">last_name</td>
-          <td class="secondary-text">The last name error message</td>
+          <td>last_name</td>
+          <td>The last name error message</td>
         </tr>
         <tr>
-          <td class="secondary-text">email</td>
-          <td class="secondary-text">The email error message</td>
+          <td>email</td>
+          <td>The email error message</td>
         </tr>
         <tr>
-          <td class="secondary-text">phone_number</td>
-          <td class="secondary-text">The phone number error message</td>
+          <td>phone_number</td>
+          <td>The phone number error message</td>
         </tr>
         <tr>
-          <td class="secondary-text">message</td>
-          <td class="secondary-text">The message error message</td>
+          <td>message</td>
+          <td>The message error message</td>
         </tr>
       </tbody>
     </table>
 
-    <h2 class="subtitle secondary-text">Functions</h2>
+    <h2 class="subtitle secondary-text has-text-centered">Functions</h2>
 
     {% for function in page.functions %}
     <div class="box">

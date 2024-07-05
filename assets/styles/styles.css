@@ -15,6 +15,10 @@ a:hover {
     color: rgba(0, 15, 105, 0.69);
 }
 
+th, td {
+    color: rgba(0, 15, 105, 0.69) !important;
+}
+
 .custom-box {
     background-color: #000000;
     padding: 1.5rem;
