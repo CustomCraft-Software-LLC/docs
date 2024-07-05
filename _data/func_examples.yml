@@ -1,34 +1,3 @@
----
-title: Contact Form Validation
----
-
-# Represents FormData
-FormData:
-  first_name: 
-    description: "The first name submitted"
-  last_name: 
-    description: "The last name submitted"
-  email: 
-    description: "The email submitted"
-  phone_number: 
-    description: "The phone number submitted"
-  message: 
-    description: "The message submitted"
-
-# Represents Error Messages
-Errors:
-  first_name: 
-    description: "The first name error message"
-  last_name: 
-    description: "The last name error message"
-  email: 
-    description: "The email error message"
-  phone_number: 
-    description: "The phone number error message"
-  message: 
-    description: "The message error message"
-
-# Functions
 functions:
   - name: validateContactForm
     description: "Takes user data and validates contact form"
@@ -39,6 +8,17 @@ functions:
     returns: 
       type: Errors
       description: "Returns validation errors"
+    example: |
+      const formData = { 
+        first_name: "John", 
+        last_name: "Doe", 
+        email: "john.doe@example.com",
+        phone_number: "123-456-7890",
+        message: "Hello, World!"
+      };
+      const errors = validateContactForm(formData);
+      console.log(errors);
+
   - name: validateEmail
     description: "Validate email"
     params:
@@ -48,6 +28,10 @@ functions:
     returns:
       type: boolean
       description: "Returns true if email is valid"
+    example: |
+      const isValid = validateEmail("john.doe@example.com");
+      console.log(isValid); // true or false
+
   - name: validatePassword
     description: "Validate password with given regex"
     params:
@@ -60,6 +44,11 @@ functions:
     returns:
       type: boolean
       description: "Returns true if password matches the regex"
+    example: |
+      const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+      const isValid = validatePassword("Password123", regex);
+      console.log(isValid); // true or false
+
   - name: validatePhoneNumber
     description: "Validate phone number"
     params:
@@ -69,6 +58,10 @@ functions:
     returns:
       type: boolean
       description: "Returns true if phone number is valid"
+    example: |
+      const isValid = validatePhoneNumber("123-456-7890");
+      console.log(isValid); // true or false
+
   - name: parseJSON
     description: "Parse JSON string into object"
     params:
@@ -78,6 +71,10 @@ functions:
     returns: 
       type: any
       description: "Parsed object"
+    example: |
+      const jsonString = '{"name": "John", "age": 30}';
+      const obj = parseJSON(jsonString);
+      console.log(obj); // { name: "John", age: 30 }
 
   - name: sortTable
     description: "Sort table"
@@ -88,6 +85,10 @@ functions:
     returns:
       type: number[]
       description: "Sorted array of numbers"
+    example: |
+      const table = [3, 1, 4, 1, 5, 9, 2];
+      const sortedTable = sortTable(table);
+      console.log(sortedTable); // [1, 1, 2, 3, 4, 5, 9]
 
   - name: formatText
     description: "Format HTML string to be formatted HTML string list"
@@ -98,6 +99,10 @@ functions:
     returns:
       type: any
       description: "Formatted text list"
+    example: |
+      const htmlText = "<p>Hello, World!</p>";
+      const formattedText = formatText(htmlText);
+      console.log(formattedText); // [formatted HTML list]
 
   - name: setCookie
     description: "Set a cookie"
@@ -111,6 +116,8 @@ functions:
     returns:
       type: void
       description: "No return value"
+    example: |
+      setCookie("user", 7);
 
   - name: removeCookie
     description: "Remove a cookie"
@@ -121,3 +128,5 @@ functions:
     returns:
       type: void
       description: "No return value"
+    example: |
+      removeCookie("user");

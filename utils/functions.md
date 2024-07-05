@@ -2,97 +2,7 @@
 title: Utility Functions Documentation
 layout: default
 permalink: /utils/functions/
-
-functions:
-  - name: validateContactForm
-    description: "Takes user data and validates contact form"
-    params:
-      - name: formData
-        type: FormData
-        description: "Takes formData"
-    returns: 
-      type: Errors
-      description: "Returns validation errors"
-  - name: validateEmail
-    description: "Validate email"
-    params:
-      - name: email
-        type: string
-        description: "Email to be validated"
-    returns:
-      type: boolean
-      description: "Returns true if email is valid"
-  - name: validatePassword
-    description: "Validate password with given regex"
-    params:
-      - name: password
-        type: string
-        description: "Password to be validated"
-      - name: regex
-        type: RegExp
-        description: "Regex pattern to validate password"
-    returns:
-      type: boolean
-      description: "Returns true if password matches the regex"
-  - name: validatePhoneNumber
-    description: "Validate phone number"
-    params:
-      - name: phoneNumber
-        type: string
-        description: "Phone number to be validated"
-    returns:
-      type: boolean
-      description: "Returns true if phone number is valid"
-  - name: parseJSON
-    description: "Parse JSON string into object"
-    params:
-      - name: json
-        type: string
-        description: "JSON string to be parsed"
-    returns: 
-      type: any
-      description: "Parsed object"
-  - name: sortTable
-    description: "Sort table"
-    params:
-      - name: table
-        type: number[]
-        description: "Array of numbers to be sorted"
-    returns:
-      type: number[]
-      description: "Sorted array of numbers"
-  - name: formatText
-    description: "Format HTML string to be formatted HTML string list"
-    params:
-      - name: text
-        type: string
-        description: "Text to be formatted"
-    returns:
-      type: any
-      description: "Formatted text list"
-  - name: setCookie
-    description: "Set a cookie"
-    params:
-      - name: name
-        type: string
-        description: "Name of the cookie"
-      - name: expDate
-        type: number
-        description: "Expiration date of the cookie"
-    returns:
-      type: void
-      description: "No return value"
-  - name: removeCookie
-    description: "Remove a cookie"
-    params:
-      - name: name
-        type: string
-        description: "Name of the cookie to be removed"
-    returns:
-      type: void
-      description: "No return value"
 ---
-
 
 <section class="section">
   <div class="container">
@@ -164,7 +74,7 @@ functions:
 
     <h2 class="subtitle secondary-text has-text-centered">Functions</h2>
 
-    {% for function in page.functions %}
+    {% for function in site.data.func_utils.functions %}
     <div class="box">
       <h3 class="title is-4 secondary-text">{{ function.name }}</h3>
       <p class="secondary-text"><strong class="secondary-text">Description:</strong> {{ function.description }}</p>
