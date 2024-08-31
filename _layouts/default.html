@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomCraft Software - docs</title>
-    <meta name="description" content="library website npm docs">
-    <!-- Add any other meta tags here -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CustomCraft Software - Docs</title>
+        <meta name="description" content="Library website npm docs">
+        <!-- CSS stylesheets and other resources can be linked here -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+        <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
+        <!-- Add any additional meta tags here -->
+    </head>
 
-    <!-- CSS stylesheets and other resources can be linked here -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
-    <!-- Add your JavaScript files here -->
-    
-    <!-- Add any structured data markup here -->
-</head>
-<body>
-    {% include navbar.html %}
+    <body>
+        <!-- Navbar -->
+        {% include navbar.html %}
 
-    <div class="container">
         <div class="columns">
             <div class="column is-one-fifth">
-                <nav class="sidebar">
+                <!-- Sidebar -->
+                <nav class="sidebar is-fixed">
                     {% include sidebar_menu.html %}
                 </nav>
             </div>
 
             <div class="column is-four-fifths">
-                <div class="container">
+                <div class="content-container">
                     {{ content }}
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Bottom-->
-    {% include footer.html %}
-</body>
+        <!-- Footer -->
+        {% include footer.html %}
+
+        <!-- JavaScript files -->
+        <!-- Ensure you include the Bulma JS if necessary for any interactive components -->
+        <script src="https://cdn.jsdelivr.net/npm/bulma@1.0.0/js/bulma.min.js"></script>
+    </body>
 </html>
