@@ -77,3 +77,78 @@ th, td {
     font-size: 2rem; /* Adjust size as needed */
     margin: 0.5rem 0;
 }
+
+.is-fixed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #FFFFFF; /* White background for the sidebar */
+    border-right: 1px solid #ddd; /* Subtle border for separation */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+}
+
+/* Full height to cover the viewport */
+.full-height {
+    height: 100vh;
+}
+
+/* Sidebar content padding */
+.menu-content {
+    padding: 1rem;
+}
+
+/* Style for menu links */
+.menu-link {
+    display: block;
+    padding: 0.75rem 1rem; /* Padding for better click area */
+    color: #333; /* Dark text color for readability */
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(0, 15, 105, 0.69); /* Semi-transparent blue background */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for menu links */
+.menu-link:hover {
+    background-color: #6937FF; /* Vibrant purple background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}
+
+/* Style nested menu lists */
+.menu-list ul {
+    padding-left: 1rem; /* Indent nested items */
+    list-style-type: none; /* Remove default list bullets */
+}
+
+/* Style nested list items */
+.menu-list ul li {
+    margin-bottom: 0.25rem; /* Space between nested items */
+}
+
+/* Scrollbar styling for WebKit browsers */
+.is-fixed::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.is-fixed::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 4px; /* Rounded corners for track */
+}
+
+.is-fixed::-webkit-scrollbar-thumb {
+    background: rgba(0, 15, 105, 0.69); /* Scrollbar color */
+    border-radius: 4px; /* Rounded corners for thumb */
+}
+
+.is-fixed::-webkit-scrollbar-thumb:hover {
+    background: #6937FF; /* Color when hovering over the scrollbar */
+}
+
+/* Scrollbar styling for Firefox */
+.is-fixed {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(0, 15, 105, 0.69) #f1f1f1; /* Scrollbar color and track color */
+}
