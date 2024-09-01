@@ -17,20 +17,16 @@
 <body>
     {% include navbar.html %}
 
-    <div class="container">
-        <div class="columns">
-            <div class="column is-one-fifth">
-                <nav class="sidebar">
-                    {% include sidebar_menu.html %}
-                </nav>
-            </div>
+    <div class="layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            {% include sidebar_menu.html %}
+        </nav>
 
-            <div class="column is-four-fifths">
-                <div class="container">
-                    {{ content }}
-                </div>
-            </div>
-        </div>
+        <!-- Main content area -->
+        <main class="content">
+            {{ content }}
+        </main>
     </div>
 
     <!--Bottom-->

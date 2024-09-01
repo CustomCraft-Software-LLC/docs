@@ -52,3 +52,38 @@ th, td {
     font-size: 2rem; /* Adjust size as needed */
     margin: 0.5rem 0;
 }
+
+.layout {
+    display: flex;
+    position: relative;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #ffffff; /* White background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 100vh; /* Full viewport height */
+    width: 250px; /* Fixed width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align with top */
+    left: -250px; /* Initially hidden off-screen */
+    transition: left 0.3s ease; /* Smooth transition for slide-in effect */
+    z-index: 1000; /* Ensure sidebar is above content */
+}
+
+/* Show sidebar on hover */
+.layout:hover .sidebar {
+    left: 0; /* Slide in sidebar */
+}
+
+/* Main content area */
+.content {
+    margin-left: 0; /* Adjust margin to fit without sidebar */
+    padding: 20px; /* Add padding for content */
+    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+}
+
+/* Adjust content margin when sidebar is visible */
+.layout:hover .content {
+    margin-left: 250px; /* Make room for sidebar */
+}
