@@ -19,6 +19,7 @@ th, td {
     color: rgba(0, 15, 105, 0.69) !important;
 }
 
+/* Custom Box */
 .custom-box {
     background-color: #000000;
     padding: 1.5rem;
@@ -26,129 +27,74 @@ th, td {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Layout */
 .columns {
-    height: 100vh; /* Ensure the columns take up the full height of the viewport */
+    height: 100vh; /* Full viewport height */
     margin: 0;
 }
 
+/* Sidebar Styles */
 .sidebar {
-    position: fixed; /* Fix the sidebar to the left */
-    top: 3.25rem; /* Adjust if your navbar height is different */
-    left: 0;
-    width: 20%; /* Adjust based on the column size */
-    height: calc(100vh - 3.25rem); /* Adjust height to fit below the navbar */
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    background-color: #f5f5f5; /* Optional: Background color for the sidebar */
-    padding: 1rem; /* Optional: Padding inside the sidebar */
-}
-
-/* Ensure the content area is not hidden behind the fixed sidebar */
-.content-container {
-    margin-left: 20%; /* Offset to account for the fixed sidebar width */
-    padding: 2rem; /* Optional: Add padding around content */
-    overflow-y: auto; /* Allow the content to scroll if it overflows */
-    height: calc(100vh - 3.25rem); /* Adjust height to fit below the navbar */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-.full-height {
-    height: 100vh;
-}
-
-.footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-.error-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; /* Full viewport height */
-    text-align: center;
-}
-
-.error-page h1 {
-    font-size: 6rem; /* Adjust size as needed */
-    margin-bottom: 1rem;
-}
-
-.error-page p {
-    font-size: 2rem; /* Adjust size as needed */
-    margin: 0.5rem 0;
-}
-
-.is-fixed {
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
     width: 250px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #FFFFFF; /* White background for the sidebar */
-    border-right: 1px solid #ddd; /* Subtle border for separation */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
-}
-
-/* Full height to cover the viewport */
-.full-height {
     height: 100vh;
-}
-
-/* Sidebar content padding */
-.menu-content {
+    overflow-y: auto;
+    background-color: #f5f5f5;
     padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Hide sidebar by default on mobile */
+    z-index: 1000;
 }
 
-/* Style for menu links */
-.menu-link {
-    display: block;
-    padding: 0.75rem 1rem; /* Padding for better click area */
-    color: #333; /* Dark text color for readability */
-    text-decoration: none; /* Remove underline */
-    background-color: rgba(0, 15, 105, 0.69); /* Semi-transparent blue background */
-    border-radius: 4px; /* Slightly rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+.sidebar.is-active {
+    transform: translateX(0); /* Slide sidebar into view on mobile when active */
 }
 
-/* Hover effect for menu links */
-.menu-link:hover {
-    background-color: #6937FF; /* Vibrant purple background on hover */
-    color: #FFFFFF; /* White text color on hover */
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: #6937FF;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #FFFFFF;
+    display: none; /* Hidden by default, will be shown on mobile */
 }
 
-/* Style nested menu lists */
-.menu-list ul {
-    padding-left: 1rem; /* Indent nested items */
-    list-style-type: none; /* Remove default list bullets */
+/* Content Area Adjustments */
+.content-container {
+    margin-left: 250px; /* Offset for the sidebar on desktop */
+    padding: 2rem;
+    transition: margin-left 0.3s ease-in-out;
 }
 
-/* Style nested list items */
-.menu-list ul li {
-    margin-bottom: 0.25rem; /* Space between nested items */
+/* Adjust for mobile view */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Initially hide the sidebar on mobile */
+    }
+    .sidebar.is-active {
+        transform: translateX(0); /* Slide into view when active */
+    }
+    .content-container {
+        margin-left: 0; /* No margin on mobile */
+    }
+    .menu-toggle {
+        display: block; /* Show the toggle button on mobile */
+    }
 }
 
-/* Scrollbar styling for WebKit browsers */
-.is-fixed::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-}
-
-.is-fixed::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
-    border-radius: 4px; /* Rounded corners for track */
-}
-
-.is-fixed::-webkit-scrollbar-thumb {
-    background: rgba(0, 15, 105, 0.69); /* Scrollbar color */
-    border-radius: 4px; /* Rounded corners for thumb */
-}
-
-.is-fixed::-webkit-scrollbar-thumb:hover {
-    background: #6937FF; /* Color when hovering over the scrollbar */
-}
-
-/* Scrollbar styling for Firefox */
-.is-fixed {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: rgba(0, 15, 105, 0.69) #f1f1f1; /* Scrollbar color and track color */
+/* Ensure the navbar or any other fixed elements do not interfere with the sidebar */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: none; /* Show sidebar on desktop */
+    }
+    .content-container {
+        margin-left: 250px; /* Maintain margin for sidebar on desktop */
+    }
 }
