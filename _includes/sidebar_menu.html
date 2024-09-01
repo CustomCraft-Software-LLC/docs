@@ -1,18 +1,16 @@
-<aside class="menu is-fixed full-height">
-    <div class="menu-content">
-        <ul class="menu-list">
-            {% for item in site.data.sidebar %}
-                <li>
-                    <a class="menu-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {% if item.children %}
-                        <ul>
-                            {% for child in item.children %}
-                                <li><a class="menu-link" href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+<aside class="menu full-height">
+    <ul class="menu-list">
+        {% for item in site.data.sidebar %}
+            <li>
+                <a class="primary-text is-uppercase has-text-weight-bold" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% if item.children %}
+                <ul>
+                    {% for child in item.children %}
+                    <li><a class="primary-text is-uppercase has-text-weight-bold" href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 </aside>

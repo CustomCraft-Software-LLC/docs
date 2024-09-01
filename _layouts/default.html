@@ -3,54 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomCraft Software - Docs</title>
-    <meta name="description" content="Library website npm docs">
-    <!-- CSS stylesheets and other resources -->
+    <title>CustomCraft Software - docs</title>
+    <meta name="description" content="library website npm docs">
+    <!-- Add any other meta tags here -->
+
+    <!-- CSS stylesheets and other resources can be linked here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
+    <!-- Add your JavaScript files here -->
+    
+    <!-- Add any structured data markup here -->
 </head>
 <body>
+    {% include navbar.html %}
 
-    <!-- Navbar for Desktop -->
-    <header class="header is-hidden-mobile">
-        {% include navbar.html %}
-    </header>
-
-    <!-- Mobile Sidebar Toggle Button -->
-    <div class="menu-toggle is-hidden-desktop">
-        <span>&#9776; Menu</span>
-    </div>
-
-    <div class="columns is-mobile">
-        <div class="column is-one-fifth-desktop is-full-mobile">
-            <!-- Sidebar for Mobile -->
-            <nav class="sidebar is-hidden-desktop is-fixed">
-                {% include sidebar_menu.html %}
-            </nav>
-        </div>
-
-        <div class="column is-four-fifths-desktop is-full-mobile">
-            <div class="content-container">
-                {{ content }}
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-fifth">
+                <nav class="sidebar">
+                    {% include sidebar_menu.html %}
+                </nav>
             </div>
-            {% include footer.html %}
+
+            <div class="column is-four-fifths">
+                <div class="container">
+                    {{ content }}
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- JavaScript files -->
-    <script src="https://cdn.jsdelivr.net/npm/bulma@1.0.0/js/bulma.min.js"></script>
-
-    <!-- Custom JavaScript for Sidebar Toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.querySelector('.menu-toggle');
-            const sidebar = document.querySelector('.sidebar');
-            
-            toggleButton.addEventListener('click', function () {
-                sidebar.classList.toggle('is-active');
-            });
-        });
-    </script>
-
+    <!--Bottom-->
+    {% include footer.html %}
 </body>
 </html>

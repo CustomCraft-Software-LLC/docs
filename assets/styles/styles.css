@@ -19,7 +19,6 @@ th, td {
     color: rgba(0, 15, 105, 0.69) !important;
 }
 
-/* Custom Box */
 .custom-box {
     background-color: #000000;
     padding: 1.5rem;
@@ -27,74 +26,29 @@ th, td {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout */
-.columns {
-    height: 100vh; /* Full viewport height */
-    margin: 0;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
+.full-height {
     height: 100vh;
-    overflow-y: auto;
-    background-color: #f5f5f5;
-    padding: 1rem;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%); /* Hide sidebar by default on mobile */
-    z-index: 1000;
 }
 
-.sidebar.is-active {
-    transform: translateX(0); /* Slide sidebar into view on mobile when active */
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
-/* Mobile Menu Toggle Button */
-.menu-toggle {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    cursor: pointer;
-    z-index: 1001;
-    background-color: #6937FF;
-    padding: 0.5rem;
-    border-radius: 4px;
-    color: #FFFFFF;
-    display: none; /* Hidden by default, will be shown on mobile */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    text-align: center;
 }
 
-/* Content Area Adjustments */
-.content-container {
-    margin-left: 250px; /* Offset for the sidebar on desktop */
-    padding: 2rem;
-    transition: margin-left 0.3s ease-in-out;
+.error-page h1 {
+    font-size: 6rem; /* Adjust size as needed */
+    margin-bottom: 1rem;
 }
 
-/* Adjust for mobile view */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%); /* Initially hide the sidebar on mobile */
-    }
-    .sidebar.is-active {
-        transform: translateX(0); /* Slide into view when active */
-    }
-    .content-container {
-        margin-left: 0; /* No margin on mobile */
-    }
-    .menu-toggle {
-        display: block; /* Show the toggle button on mobile */
-    }
-}
-
-/* Ensure the navbar or any other fixed elements do not interfere with the sidebar */
-@media (min-width: 769px) {
-    .sidebar {
-        transform: none; /* Show sidebar on desktop */
-    }
-    .content-container {
-        margin-left: 250px; /* Maintain margin for sidebar on desktop */
-    }
+.error-page p {
+    font-size: 2rem; /* Adjust size as needed */
+    margin: 0.5rem 0;
 }
