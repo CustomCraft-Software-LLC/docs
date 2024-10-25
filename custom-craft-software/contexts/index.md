@@ -9,5 +9,6 @@ layout: default
 A brief description of what this package is about, including key features and usage.
 
 ## Components
-- [Contexts](/contexts/index)\n
 
+- [AppContext](/contexts/AppContext)
+- [UserContext](/contexts/UserContext)

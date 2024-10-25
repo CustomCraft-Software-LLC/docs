@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomCraft Software - docs</title>
     <meta name="description" content="library website npm docs">
-    <!-- Add any other meta tags here -->
-
-    <!-- CSS stylesheets and other resources can be linked here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
-    <!-- Add your JavaScript files here -->
-    
-    <!-- Add any structured data markup here -->
 </head>
 <body>
     {% include navbar.html %}
+
+    <!-- Sidebar toggle button -->
+    <button id="toggle-sidebar" class="button">☰ Menu</button>
 
     <div class="layout">
         <!-- Sidebar -->
@@ -29,7 +26,18 @@
         </main>
     </div>
 
-    <!--Bottom-->
     {% include footer.html %}
+
+    <!-- JavaScript to toggle sidebar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleSidebarButton = document.querySelector('#toggle-sidebar');
+
+            toggleSidebarButton.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

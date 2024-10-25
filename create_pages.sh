@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # Base directory for output
-BASE_DIR="./custom-craft-software/"
-# YAML file containing the structure
+BASE_DIR="./custom-craft-software"
+# YAML file containing the sidebar structure
 YAML_FILE="./_data/sidebar.yml"
 
-# Function to create a markdown file with given parameters
+# Function to create markdown pages for each package
 create_file() {
   local path="$1"
   local title="$2"
   local components="$3"
 
-  # Create necessary directories
+  # Ensure the directory exists
   mkdir -p "$(dirname "$path")"
 
   # Write content to the markdown file
@@ -28,40 +28,41 @@ A brief description of what this package is about, including key features and us
 
 ## Components
 $components
-
 EOL
 
   echo "Created file: $path"
 }
 
-# Check if YAML file exists
+# Ensure YAML file exists
 if [[ ! -f "$YAML_FILE" ]]; then
   echo "YAML file not found: $YAML_FILE"
   exit 1
 fi
 
-# Declare an associative array to store content for each package
+# Declare an associative array to store the components for each package
 declare -A package_content
 
-# Read the YAML file line by line
+# Parse the YAML file
 while IFS= read -r line; do
-  # Match lines that contain "title:"
   if [[ "$line" == *"title:"* ]]; then
+    # Extract the current title
     current_title=$(echo "$line" | sed 's/.*title: //')
-  # Match lines that contain "path:"
   elif [[ "$line" == *"path:"* ]]; then
-    item_path=$(echo "$line" | sed 's/.*path: //')
+    # Extract the path and sanitize any leading/trailing spaces
+    item_path=$(echo "$line" | sed 's/.*path: //' | xargs)
     package_name=$(dirname "$item_path")
-    # Initialize content for the package if not already done
-    package_content["$package_name"]+="- [$current_title]($item_path)\n"
+
+    # Add the component link to the corresponding package
+    package_content["$package_name"]+=$'\n'"- [$current_title]($item_path)"
   fi
 done < "$YAML_FILE"
 
-# Now generate a page per package
+# Now generate a page for each package
 for package in "${!package_content[@]}"; do
+  # Define the output file path and title
   page_path="$BASE_DIR/$package/index.md"
   package_title=$(echo "$package" | sed 's/-/ /g' | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1')
 
-  # Create the file with links to each component
+  # Create the file with the components
   create_file "$page_path" "$package_title" "${package_content[$package]}"
 done
