@@ -9,7 +9,7 @@ YAML_FILE="./_data/sidebar.yml"
 create_file() {
   local path="$1"
   local title="$2"
-  local content="$3"
+  local components="$3"
 
   # Create necessary directories
   mkdir -p "$(dirname "$path")"
@@ -23,7 +23,11 @@ layout: default
 
 # $title
 
-$content
+## Overview
+A brief description of what this package is about, including key features and usage.
+
+## Components
+$components
 
 EOL
 
@@ -57,7 +61,7 @@ done < "$YAML_FILE"
 for package in "${!package_content[@]}"; do
   page_path="$BASE_DIR/$package/index.md"
   package_title=$(echo "$package" | sed 's/-/ /g' | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1')
-  
-  # Create the file with links to each component/utility
+
+  # Create the file with links to each component
   create_file "$page_path" "$package_title" "${package_content[$package]}"
 done
