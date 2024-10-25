@@ -9,7 +9,7 @@ YAML_FILE="./_data/sidebar.yml"
 create_file() {
   local path="$1"
   local title="$2"
-  local layout="$3"
+  local content="$3"
 
   # Create necessary directories
   mkdir -p "$(dirname "$path")"
@@ -18,10 +18,12 @@ create_file() {
   cat <<EOL > "$path"
 ---
 title: $title
-layout: $layout
+layout: default
 ---
 
 # $title
+
+$content
 
 EOL
 
@@ -34,6 +36,9 @@ if [[ ! -f "$YAML_FILE" ]]; then
   exit 1
 fi
 
+# Declare an associative array to store content for each package
+declare -A package_content
+
 # Read the YAML file line by line
 while IFS= read -r line; do
   # Match lines that contain "title:"
@@ -42,7 +47,17 @@ while IFS= read -r line; do
   # Match lines that contain "path:"
   elif [[ "$line" == *"path:"* ]]; then
     item_path=$(echo "$line" | sed 's/.*path: //')
-    full_path="$BASE_DIR$item_path/index.md"
-    create_file "$full_path" "$current_title" "default"
+    package_name=$(dirname "$item_path")
+    # Initialize content for the package if not already done
+    package_content["$package_name"]+="- [$current_title]($item_path)\n"
   fi
 done < "$YAML_FILE"
+
+# Now generate a page per package
+for package in "${!package_content[@]}"; do
+  page_path="$BASE_DIR/$package/index.md"
+  package_title=$(echo "$package" | sed 's/-/ /g' | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1')
+  
+  # Create the file with links to each component/utility
+  create_file "$page_path" "$package_title" "${package_content[$package]}"
+done
