@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomCraft Software - docs</title>
-    <meta name="description" content="library website npm docs">
+    <title>CustomCraft Software - Docs</title>
+    <meta name="description" content="CustomCraft Software documentation for npm library">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="{{ '../assets/styles/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/styles.css' | relative_url }}">
 </head>
 <body>
     {% include navbar.html %}
-
+    
     <!-- Sidebar toggle button -->
-    <button id="toggle-sidebar" class="button">☰ Menu</button>
+    <button id="toggle-sidebar" class="button is-primary is-outlined toggle-btn">☰ Menu</button>
 
     <div class="layout">
         <!-- Sidebar -->
@@ -22,6 +22,13 @@
 
         <!-- Main content area -->
         <main class="content">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/docs">Documentation</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Current Page</a></li>
+                </ul>
+            </nav>
             {{ content }}
         </main>
     </div>

@@ -1,0 +1,119 @@
+.
+├── 404.html
+├── assets
+│   ├── images
+│   ├── js
+│   │   ├── burger.js
+│   │   ├── scroll.js
+│   │   ├── search.js
+│   │   └── sidebar.js
+│   └── styles
+│       └── styles.css
+├── changelog.md
+├── CNAME
+├── _config.yml
+├── create_pages.sh
+├── custom-craft-software
+│   ├── contexts
+│   │   └── index.md
+│   ├── custom-components
+│   │   └── index.md
+│   ├── hooks
+│   │   └── index.md
+│   ├── logging
+│   │   └── index.md
+│   ├── mui-components
+│   │   └── index.md
+│   ├── react-native-components
+│   │   └── index.md
+│   └── utils
+│       └── index.md
+├── _data
+│   ├── func_examples.yml
+│   ├── func_utils.yml
+│   ├── navigation.yml
+│   └── sidebar.yml
+├── examples
+│   ├── functions.md
+│   └── index.md
+├── faq.md
+├── Gemfile
+├── Gemfile.lock
+├── _includes
+│   ├── footer.html
+│   ├── navbar.html
+│   └── sidebar_menu.html
+├── index.md
+├── installation.md
+├── _layouts
+│   ├── coming_soon.html
+│   └── default.html
+├── LICENSE
+├── license.md
+├── mui-components.md
+├── _posts
+│   └── 2024-05-15-welcome-to-jekyll.markdown
+├── README.md
+├── _site
+│   ├── 404.html
+│   ├── assets
+│   │   ├── js
+│   │   │   ├── burger.js
+│   │   │   ├── scroll.js
+│   │   │   ├── search.js
+│   │   │   └── sidebar.js
+│   │   ├── main.css
+│   │   ├── minima-social-icons.svg
+│   │   └── styles
+│   │       └── styles.css
+│   ├── changelog
+│   │   └── index.html
+│   ├── CNAME
+│   ├── create_pages.sh
+│   ├── custom-craft-software
+│   │   ├── contexts
+│   │   │   └── index.html
+│   │   ├── custom-components
+│   │   │   └── index.html
+│   │   ├── hooks
+│   │   │   └── index.html
+│   │   ├── logging
+│   │   │   └── index.html
+│   │   ├── mui-components
+│   │   │   └── index.html
+│   │   ├── react-native-components
+│   │   │   └── index.html
+│   │   └── utils
+│   │       └── index.html
+│   ├── examples
+│   │   ├── functions
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── faq.html
+│   ├── feed.xml
+│   ├── Gemfile
+│   ├── Gemfile.lock
+│   ├── index.html
+│   ├── installation
+│   │   └── index.html
+│   ├── jekyll
+│   │   └── update
+│   │       └── 2024
+│   │           └── 05
+│   │               └── 15
+│   │                   └── welcome-to-jekyll.html
+│   ├── license
+│   │   └── index.html
+│   ├── mui-components
+│   │   └── index.html
+│   ├── README.md
+│   └── utils
+│       ├── functions
+│       │   └── index.html
+│       └── index.html
+├── structure.txt
+└── utils
+    ├── functions.md
+    └── index.md
+
+43 directories, 73 files

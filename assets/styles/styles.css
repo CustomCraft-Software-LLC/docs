@@ -1,5 +1,6 @@
 a {
     color: rgba(0, 15, 105, 0.69) !important;
+    text-decoration: none;
 }
 
 a:hover {
@@ -7,6 +8,7 @@ a:hover {
     background-color: #6937FF;
 }
 
+/* Text Colors */
 .primary-text { 
     color: #6937FF;
 }
@@ -15,10 +17,12 @@ a:hover {
     color: rgba(0, 15, 105, 0.69);
 }
 
+/* Table Styles */
 th, td {
     color: rgba(0, 15, 105, 0.69) !important;
 }
 
+/* Custom Box Styling */
 .custom-box {
     background-color: #000000;
     padding: 1.5rem;
@@ -26,39 +30,43 @@ th, td {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Full-Height Utility */
 .full-height {
     height: 100vh;
 }
 
+/* Footer Link Hover */
 .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
+/* Error Page Styling */
 .error-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Full viewport height */
+    height: 50vh;
     text-align: center;
 }
 
 .error-page h1 {
-    font-size: 6rem; /* Adjust size as needed */
+    font-size: 6rem;
     margin-bottom: 1rem;
 }
 
 .error-page p {
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2rem;
     margin: 0.5rem 0;
 }
 
+/* Layout Wrapper */
 .layout {
     display: flex;
     position: relative;
 }
 
-/* Sidebar Styles */
+/* Sidebar Styling */
 .sidebar {
     background-color: #ffffff;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -71,12 +79,12 @@ th, td {
     z-index: 1000;
 }
 
-/* Show sidebar on .sidebar.active class instead of hover */
+/* Sidebar active state for toggle */
 .sidebar.active {
     left: 0;
 }
 
-/* Main content area */
+/* Content Area */
 .content {
     margin-left: 0;
     padding: 20px;
