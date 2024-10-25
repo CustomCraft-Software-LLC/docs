@@ -14,53 +14,26 @@
     - title: Functions
       url: /examples/functions/
 
-- title: custom-craft-software/utils
-  url: /utils/
-  children:
-    - title: Overview
-      url: /utils/
-    - title: Functions
-      url: /utils/functions/
+- title: Contexts
+  path: /contexts/index
 
-- title: custom-craft-software/mui-components
-  url: /mui-components/
-  children:
-    - title: Animation
-      url: /mui-components/#animation
-    - title: CalendarWidget
-      url: /mui-components/#calendar-widget
-    - title: ContactForm
-      url: /mui-components/#contact-form
-    - title: EventCalendar
-      url: /mui-components/#event-calendar
-    - title: FAQSection
-      url: /mui-components/#faq-section
-    - title: Features
-      url: /mui-components/#features
-    - title: GetQuoteSection
-      url: /mui-components/#get-quote-section
-    - title: HeroSection
-      url: /mui-components/#hero-section
-    - title: NewsletterSignup
-      url: /mui-components/#newsletter-signup
-    - title: NotFound
-      url: /mui-components/#not-found
-    - title: Pricing
-      url: /mui-components/#pricing
-    - title: PricingCard
-      url: /mui-components/#pricing-card
-    - title: PricingTable
-      url: /mui-components/#pricing-table
-    - title: ServicesSection
-      url: /mui-components/#services-section
-    - title: Sidebar
-      url: /mui-components/#sidebar
-    - title: StatWidget
-      url: /mui-components/#stat-widget
-    - title: ThemeToggleProvider
-      url: /mui-components/#theme-toggle-provider
-    - title: Widget
-      url: /mui-components/#widget
+- title: Custom Components
+  path: /custom-components/index
+
+- title: Hooks
+  path: /hooks/index
+
+- title: Logging
+  path: /logging/index
+
+- title: MUI Components
+  path: /mui-components/index
+
+- title: React Native Components
+  path: /react-native-components/index
+
+- title: Utilities
+  path: /utils/index
 
 - title: FAQ
   url: /faq/
