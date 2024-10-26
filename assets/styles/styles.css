@@ -66,32 +66,31 @@ th, td {
     position: relative;
 }
 
-/* Sidebar Styling */
-.sidebar {
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: left 0.3s ease;
-    z-index: 1000;
-}
-
-/* Sidebar active state for toggle */
-.sidebar.active {
-    left: 0;
-}
-
-/* Content Area */
-.content {
-    margin-left: 0;
-    padding: 20px;
-    transition: margin-left 0.3s ease;
-}
-
-/* Adjust content margin when sidebar is visible */
-.sidebar.active ~ .content {
-    margin-left: 250px;
-}
+.menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list > li {
+    margin-bottom: 10px;
+  }
+  
+  .toggle-checkbox {
+    display: none; /* Hide the checkbox */
+  }
+  
+  .toggle-label {
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+  }
+  
+  /* Nested menu starts hidden and is shown only when the corresponding checkbox is checked */
+  .nested-menu {
+    display: none;
+    margin-left: 20px;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label + .nested-menu {
+    display: block;
+  }

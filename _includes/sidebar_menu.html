@@ -1,27 +1,21 @@
-<nav class="menu">
+<aside class="menu">
     <ul class="menu-list">
-        {% for item in site.data.navigation %}
-            <li>
-                <a href="{{ item.url }}">{{ item.title }}</a>
-                {% if item.children %}
-                    <ul>
-                        {% for child in item.children %}
-                            <li>
-                                <a href="{{ child.url }}">{{ child.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-                {% if item.items %}
-                    <ul>
-                        {% for subitem in item.items %}
-                            <li>
-                                <a href="{{ subitem.path }}">{{ subitem.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
+      {% for item in site.data.sidebar %}
+        <li>
+          {% if item.children %}
+            <input type="checkbox" id="toggle-{{ item.title | slugify }}" class="toggle-checkbox">
+            <label for="toggle-{{ item.title | slugify }}" class="toggle-label">{{ item.title }}</label>
+            <ul class="nested-menu">
+              {% for child in item.children %}
+                <li>
+                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
-</nav>
+  </aside>

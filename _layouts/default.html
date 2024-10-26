@@ -10,9 +10,6 @@
 </head>
 <body>
     {% include navbar.html %}
-    
-    <!-- Sidebar toggle button -->
-    <button id="toggle-sidebar" class="button is-primary is-outlined toggle-btn">☰ Menu</button>
 
     <div class="layout">
         <!-- Sidebar -->
@@ -34,17 +31,5 @@
     </div>
 
     {% include footer.html %}
-
-    <!-- JavaScript to toggle sidebar -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sidebar = document.querySelector('.sidebar');
-            const toggleSidebarButton = document.querySelector('#toggle-sidebar');
-
-            toggleSidebarButton.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
