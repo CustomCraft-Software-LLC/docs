@@ -1,42 +1,23 @@
 ---
-title: /react-native-components
+title: /custom Craft Software/react Native Components
 layout: default
+permalink: /.///custom-craft-software/react-native-components/index.md/
 ---
 
-# /react-native-components
+# /custom Craft Software/react Native Components
 
 ## Overview
 A brief description of what this package is about, including key features and usage.
 
 ## Components
 
-- [Gestures
-](/react-native-components/Gestures
-)
-- [KeyboardAwareComponent
-](/react-native-components/KeyboardAwareComponent
-)
-- [StackNavigation
-](/react-native-components/StackNavigation
-)
-- [DetailsScreen
-](/react-native-components/DetailsScreen
-)
-- [HomeScreen
-](/react-native-components/HomeScreen
-)
-- [AnimatedView
-](/react-native-components/AnimatedView
-)
-- [NumericInput
-](/react-native-components/NumericInput
-)
-- [PasswordInput
-](/react-native-components/PasswordInput
-)
-- [Section
-](/react-native-components/Section
-)
-- [TextInput
-](/react-native-components/TextInput
-)
+- [Gestures](/custom-craft-software/react-native-components/Gestures)
+- [KeyboardAwareComponent](/custom-craft-software/react-native-components/KeyboardAwareComponent)
+- [StackNavigation](/custom-craft-software/react-native-components/StackNavigation)
+- [DetailsScreen](/custom-craft-software/react-native-components/DetailsScreen)
+- [HomeScreen](/custom-craft-software/react-native-components/HomeScreen)
+- [AnimatedView](/custom-craft-software/react-native-components/AnimatedView)
+- [NumericInput](/custom-craft-software/react-native-components/NumericInput)
+- [PasswordInput](/custom-craft-software/react-native-components/PasswordInput)
+- [Section](/custom-craft-software/react-native-components/Section)
+- [TextInput](/custom-craft-software/react-native-components/TextInput)

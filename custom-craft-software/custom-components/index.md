@@ -1,66 +1,31 @@
 ---
-title: /custom-components
+title: /custom Craft Software/custom Components
 layout: default
+permalink: /.///custom-craft-software/custom-components/index.md/
 ---
 
-# /custom-components
+# /custom Craft Software/custom Components
 
 ## Overview
 A brief description of what this package is about, including key features and usage.
 
 ## Components
 
-- [Bar Component
-](/custom-components/Bar
-)
-- [Box Component
-](/custom-components/Box
-)
-- [Button Component
-](/custom-components/Button
-)
-- [CodeSection Component
-](/custom-components/CodeSection
-)
-- [CountdownTimer Component
-](/custom-components/CountdownTimer
-)
-- [DatePicker Component
-](/custom-components/DatePicker
-)
-- [FileUpload Component
-](/custom-components/FileUpload
-)
-- [InlineCode Component
-](/custom-components/InlineCode
-)
-- [Listbox Component
-](/custom-components/Listbox
-)
-- [NavButton Component
-](/custom-components/NavButton
-)
-- [Number Component
-](/custom-components/Number
-)
-- [Percentage Component
-](/custom-components/Percentage
-)
-- [Profile Component
-](/custom-components/Profile
-)
-- [Search Component
-](/custom-components/Search
-)
-- [Section Component
-](/custom-components/Section
-)
-- [Table Component
-](/custom-components/Table
-)
-- [TextSection Component
-](/custom-components/TextSection
-)
-- [Timeline Component
-](/custom-components/Timeline
-)
+- [Bar Component](/custom-craft-software/custom-components/Bar)
+- [Box Component](/custom-craft-software/custom-components/Box)
+- [Button Component](/custom-craft-software/custom-components/Button)
+- [CodeSection Component](/custom-craft-software/custom-components/CodeSection)
+- [CountdownTimer Component](/custom-craft-software/custom-components/CountdownTimer)
+- [DatePicker Component](/custom-craft-software/custom-components/DatePicker)
+- [FileUpload Component](/custom-craft-software/custom-components/FileUpload)
+- [InlineCode Component](/custom-craft-software/custom-components/InlineCode)
+- [Listbox Component](/custom-craft-software/custom-components/Listbox)
+- [NavButton Component](/custom-craft-software/custom-components/NavButton)
+- [Number Component](/custom-craft-software/custom-components/Number)
+- [Percentage Component](/custom-craft-software/custom-components/Percentage)
+- [Profile Component](/custom-craft-software/custom-components/Profile)
+- [Search Component](/custom-craft-software/custom-components/Search)
+- [Section Component](/custom-craft-software/custom-components/Section)
+- [Table Component](/custom-craft-software/custom-components/Table)
+- [TextSection Component](/custom-craft-software/custom-components/TextSection)
+- [Timeline Component](/custom-craft-software/custom-components/Timeline)

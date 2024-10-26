@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Base directory for output
-BASE_DIR="./custom-craft-software"
+BASE_DIR="./"
 # YAML file containing the sidebar structure
 YAML_FILE="./_data/sidebar.yml"
 
@@ -11,6 +11,10 @@ create_file() {
   local title="$2"
   local components="$3"
 
+  # Calculate the permalink based on the path structure
+  local permalink="/${path#./custom-craft-software/}/"
+  permalink=${permalink%/index.md}  # remove "index.md" from permalink
+
   # Ensure the directory exists
   mkdir -p "$(dirname "$path")"
 
@@ -19,6 +23,7 @@ create_file() {
 ---
 title: $title
 layout: default
+permalink: $permalink
 ---
 
 # $title
@@ -30,7 +35,7 @@ A brief description of what this package is about, including key features and us
 $components
 EOL
 
-  echo "Created file: $path"
+  echo "Created file: $path with permalink $permalink"
 }
 
 # Ensure YAML file exists

@@ -1,18 +1,15 @@
 ---
-title: /contexts
+title: /custom Craft Software/contexts
 layout: default
+permalink: /.///custom-craft-software/contexts/index.md/
 ---
 
-# /contexts
+# /custom Craft Software/contexts
 
 ## Overview
 A brief description of what this package is about, including key features and usage.
 
 ## Components
 
-- [AppContext
-](/contexts/AppContext
-)
-- [UserContext
-](/contexts/UserContext
-)
+- [AppContext](/custom-craft-software/contexts/AppContext)
+- [UserContext](/custom-craft-software/contexts/UserContext)
