@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomCraft Software - Docs</title>
+    <title>{{page.title}} | CustomCraft Software</title>
     <meta name="description" content="CustomCraft Software documentation for npm library">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="{{ '/assets/styles/styles.css' | relative_url }}">
@@ -12,18 +12,15 @@
     {% include navbar.html %}
 
     <div class="columns is-desktop">
-        <!-- Sidebar -->
-        <aside class="column is-3 sidebar">
+        <aside class="column is-2 sidebar">
             {% include sidebar_menu.html %}
         </aside>
 
-        <!-- Main content area -->
-        <main class="column is-9 content">
+        <main class="column is-10 content">
             <div class="container">
                 <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/docs">Documentation</a></li>
                         <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li> <!-- Dynamically set current page -->
                     </ul>
                 </nav>
