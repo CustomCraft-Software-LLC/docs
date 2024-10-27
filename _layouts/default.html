@@ -11,22 +11,24 @@
 <body>
     {% include navbar.html %}
 
-    <div class="layout">
+    <div class="columns is-desktop">
         <!-- Sidebar -->
-        <nav class="sidebar">
+        <aside class="column is-3 sidebar">
             {% include sidebar_menu.html %}
-        </nav>
+        </aside>
 
         <!-- Main content area -->
-        <main class="content">
-            <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/docs">Documentation</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">Current Page</a></li>
-                </ul>
-            </nav>
-            {{ content }}
+        <main class="column is-9 content">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li> <!-- Dynamically set current page -->
+                    </ul>
+                </nav>
+                {{ content }} 
+            </div>
         </main>
     </div>
 
