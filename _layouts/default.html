@@ -11,19 +11,27 @@
 <body>
     {% include navbar.html %}
 
-    <div class="columns is-desktop">
-        <aside class="column is-2 sidebar">
-            {% include sidebar_menu.html %}
-        </aside>
-
-        <main class="column is-10 content">
+    <div class="columns is-mobile is-multiline">
+        <!-- Breadcrumb Navigation -->
+        <div class="column is-12">
             <div class="container">
                 <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li> <!-- Dynamically set current page -->
+                        <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
                     </ul>
                 </nav>
+            </div>
+        </div>
+
+        <!-- Sidebar (reorders below content on mobile) -->
+        <aside class="column is-2-tablet is-3-desktop is-hidden-mobile sidebar">
+            {% include sidebar_menu.html %}
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="column is-10-tablet is-9-desktop content">
+            <div class="container">
                 {{ content }} 
             </div>
         </main>

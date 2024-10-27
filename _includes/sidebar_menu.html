@@ -1,21 +1,21 @@
 <aside class="menu">
-    <ul class="menu-list">
-      {% for item in site.data.sidebar %}
-        <li>
-          {% if item.children %}
-            <input type="checkbox" id="toggle-{{ item.title | slugify }}" class="toggle-checkbox">
-            <label for="toggle-{{ item.title | slugify }}" class="toggle-label">{{ item.title }}</label>
-            <ul class="nested-menu">
-              {% for child in item.children %}
-                <li>
-                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </aside>
+  <ul class="menu-list">
+    {% for item in site.data.sidebar %}
+      <li>
+        {% if item.children %}
+          <input type="checkbox" id="toggle-{{ item.title | slugify }}" class="toggle-checkbox">
+          <label for="toggle-{{ item.title | slugify }}" class="toggle-label">{{ item.title }}</label>
+          <ul class="nested-menu">
+            {% for child in item.children %}
+              <li>
+                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

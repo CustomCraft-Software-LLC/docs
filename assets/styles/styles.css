@@ -66,31 +66,48 @@ th, td {
     position: relative;
 }
 
-.menu-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu-list > li {
-    margin-bottom: 10px;
-  }
-  
-  .toggle-checkbox {
-    display: none; /* Hide the checkbox */
-  }
-  
-  .toggle-label {
-    cursor: pointer;
-    font-weight: bold;
-    display: block;
-  }
-  
-  /* Nested menu starts hidden and is shown only when the corresponding checkbox is checked */
-  .nested-menu {
+.menu {
+    padding: 1rem;
+}
+
+.toggle-checkbox {
     display: none;
-    margin-left: 20px;
-  }
-  
-  .toggle-checkbox:checked + .toggle-label + .nested-menu {
+}
+
+.toggle-label {
+    font-weight: bold;
+    cursor: pointer;
     display: block;
-  }
+    padding: 0.5rem;
+}
+
+.nested-menu {
+    display: none;
+    padding-left: 1.5rem;
+}
+
+.toggle-checkbox:checked + .toggle-label + .nested-menu {
+    display: block;
+}
+
+.nested-menu li a {
+    padding: 0.3rem 0;
+    display: block;
+    color: #4a4a4a;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 1rem 0.5rem;
+    }
+
+    .toggle-label::after {
+        content: "▼";
+        float: right;
+        transition: transform 0.2s;
+    }
+
+    .toggle-checkbox:checked + .toggle-label::after {
+        transform: rotate(180deg);
+    }
+}

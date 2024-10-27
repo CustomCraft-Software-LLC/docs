@@ -1,18 +1,5 @@
 - title: Getting Started
   url: /
-  children:
-    - title: Introduction
-      url: /
-    - title: Installation
-      url: /installation/
-
-- title: Examples
-  url: /examples/
-  children:
-    - title: Overview
-      url: /examples/
-    - title: Functions
-      url: /examples/functions/
 
 - title: Contexts
   url: /custom-craft-software/contexts/
