@@ -68,46 +68,42 @@ th, td {
 
 .menu {
     padding: 1rem;
-}
-
-.toggle-checkbox {
-    display: none;
-}
-
-.toggle-label {
+  }
+  
+  .toggle-checkbox {
+    display: none; /* Hide the checkbox */
+  }
+  
+  .toggle-label {
     font-weight: bold;
     cursor: pointer;
-    display: block;
     padding: 0.5rem;
-}
-
-.nested-menu {
-    display: none;
-    padding-left: 1.5rem;
-}
-
-.toggle-checkbox:checked + .toggle-label + .nested-menu {
     display: block;
-}
-
-.nested-menu li a {
+  }
+  
+  .nested-menu {
+    display: none; /* Initially hide nested menus */
+    padding-left: 1rem;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label + .nested-menu {
+    display: block; /* Show nested menu when checked */
+  }
+  
+  .nested-menu li a {
+    color: #4a4a4a;
     padding: 0.3rem 0;
     display: block;
-    color: #4a4a4a;
-}
-
-@media (max-width: 768px) {
-    .menu {
-        padding: 1rem 0.5rem;
-    }
-
+  }
+  
+  @media (max-width: 768px) {
     .toggle-label::after {
-        content: "▼";
-        float: right;
-        transition: transform 0.2s;
+      content: "▼";
+      float: right;
+      transition: transform 0.3s;
     }
-
+  
     .toggle-checkbox:checked + .toggle-label::after {
-        transform: rotate(180deg);
+      transform: rotate(180deg); /* Rotate arrow when expanded */
     }
-}
+  }
