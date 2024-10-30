@@ -13,23 +13,12 @@
             {% include navbar.html %}
         </div>  
 
-        <div class="columns is-mobile is-multiline">
-            <div class="column is-12 mt-6 pl-5">
-                <div class="container">
-                    <nav class="breadcrumb" aria-label="breadcrumbs">
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <aside class="column is-2-tablet is-3-desktop is-hidden-mobile sidebar">
+        <div class="columns is-mobile is-multiline pt-6 ">
+            <aside class="column is-2-tablet mt-5 is-3-desktop is-hidden-mobile sidebar">
                 {% include sidebar_menu.html %}
             </aside>
 
-            <main class="column is-10-tablet is-9-desktop content">
+            <main class="column is-10-tablet mt-6 is-9-desktop content">
                 <div class="container">
                     {{ content }} 
                 </div>

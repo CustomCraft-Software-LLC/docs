@@ -4,139 +4,141 @@ layout: default
 permalink: /custom-craft-software/custom-components/
 ---
 
-# Custom Craft Software - Custom Components
-
-## Overview
-A brief description of what this package is about, including key features and usage.
-
-## Components
+<div class="has-text-centered">
+  <h1>Custom Craft Software - Custom Components</h1>
+  <h2>Overview</h2>
+  <p>This package includes a variety of custom UI components to enhance application development, focusing on reusability and ease of integration. Below is a list of available components and their main features.</p>
+  <h2>Components</h2>
+</div>
 
 <div class="container">
   <div class="columns is-multiline">
+
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Bar" class="box">
+      <div class="box">
         <h3 class="title is-5">Bar Component</h3>
-        <p>Provides a bar UI element.</p>
-      </a>
+        <p>Provides a customizable bar UI element, useful for headers or progress indicators.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Box" class="box">
+      <div class="box">
         <h3 class="title is-5">Box Component</h3>
-        <p>A versatile box layout.</p>
-      </a>
+        <p>A flexible container layout component that can hold various content types, styled with padding and borders.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Button" class="box">
+      <div class="box">
         <h3 class="title is-5">Button Component</h3>
-        <p>Customizable button element.</p>
-      </a>
+        <p>A customizable button component with options for different styles, colors, and actions.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/CodeSection" class="box">
+      <div class="box">
         <h3 class="title is-5">CodeSection Component</h3>
-        <p>Displays code snippets with styling.</p>
-      </a>
+        <p>Displays formatted code snippets with syntax highlighting for better readability.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/CountdownTimer" class="box">
+      <div class="box">
         <h3 class="title is-5">CountdownTimer Component</h3>
-        <p>A countdown timer UI.</p>
-      </a>
+        <p>A timer component that counts down to a specified time, often used for timed events or promotions.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/DatePicker" class="box">
+      <div class="box">
         <h3 class="title is-5">DatePicker Component</h3>
-        <p>Selects a date from a calendar.</p>
-      </a>
+        <p>Allows users to select dates from a calendar-style picker, supporting various formats and ranges.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/FileUpload" class="box">
+      <div class="box">
         <h3 class="title is-5">FileUpload Component</h3>
-        <p>Handles file uploads.</p>
-      </a>
+        <p>Manages file uploads with options for previewing, progress tracking, and validation checks.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/InlineCode" class="box">
+      <div class="box">
         <h3 class="title is-5">InlineCode Component</h3>
-        <p>Displays inline code snippets.</p>
-      </a>
+        <p>Displays inline code snippets within text, often used for showcasing syntax or small code examples.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Listbox" class="box">
+      <div class="box">
         <h3 class="title is-5">Listbox Component</h3>
-        <p>Dropdown selection with multiple items.</p>
-      </a>
+        <p>Provides a dropdown list with multiple selectable items, suitable for forms or option selections.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/NavButton" class="box">
+      <div class="box">
         <h3 class="title is-5">NavButton Component</h3>
-        <p>Navigation button element.</p>
-      </a>
+        <p>A navigation button with configurable actions, styles, and icons for better user navigation.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Number" class="box">
+      <div class="box">
         <h3 class="title is-5">Number Component</h3>
-        <p>Displays numerical data.</p>
-      </a>
+        <p>Displays numerical data with options for formatting, like decimal places or currency symbols.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Percentage" class="box">
+      <div class="box">
         <h3 class="title is-5">Percentage Component</h3>
-        <p>Displays percentage values.</p>
-      </a>
+        <p>Shows values in percentage format, ideal for stats, progress, or completion indicators.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Profile" class="box">
+      <div class="box">
         <h3 class="title is-5">Profile Component</h3>
-        <p>Displays user profile information.</p>
-      </a>
+        <p>Displays user profile information including avatar, username, and bio details.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Search" class="box">
+      <div class="box">
         <h3 class="title is-5">Search Component</h3>
-        <p>Search input field with results.</p>
-      </a>
+        <p>A search input field that provides real-time results and suggestions.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Section" class="box">
+      <div class="box">
         <h3 class="title is-5">Section Component</h3>
-        <p>Used to create sections in your layout.</p>
-      </a>
+        <p>Creates distinct sections within your layout, useful for structuring pages or grouping content.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Table" class="box">
+      <div class="box">
         <h3 class="title is-5">Table Component</h3>
-        <p>Displays tabular data.</p>
-      </a>
+        <p>Displays data in a table format, supporting sorting, filtering, and pagination.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/TextSection" class="box">
+      <div class="box">
         <h3 class="title is-5">TextSection Component</h3>
-        <p>Displays a section of text.</p>
-      </a>
+        <p>Displays a styled block of text, commonly used for headers, descriptions, or info sections.</p>
+      </div>
     </div>
     
     <div class="column is-6-tablet is-4-desktop">
-      <a href="/custom-craft-software/custom-components/Timeline" class="box">
+      <div class="box">
         <h3 class="title is-5">Timeline Component</h3>
-        <p>Displays a timeline of events.</p>
-      </a>
+        <p>Displays events in a timeline format, useful for showcasing chronological information.</p>
+      </div>
     </div>
+
   </div>
 </div>
