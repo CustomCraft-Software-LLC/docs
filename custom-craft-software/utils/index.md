@@ -4,12 +4,12 @@ layout: default
 permalink: /custom-craft-software/utils/
 ---
 
-# Custom Craft Software - Utils
-
-## Overview
-A brief description of what this package is about, including key features and usage.
-
-## Components
+<div class="has-text-centered">
+  <h1>Custom Craft Software - Utils</h1>
+  <h2>Overview</h2>
+  <p>A brief description of what this package is about, including key features and usage.</p>
+  <h2>Components</h2>
+</div>
 
 <div>
   <div class="columns is-multiline">

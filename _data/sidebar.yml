@@ -131,7 +131,7 @@
     - title: TextInput
       path: /custom-craft-software/react-native-components/TextInput
 
-- title: Utilities
+- title: Utils
   url: /custom-craft-software/utils/
   items:
     - title: API Utility
@@ -151,9 +151,6 @@
 
 - title: FAQ
   url: /faq/
-
-- title: Changelog
-  url: /changelog/
 
 - title: License
   url: /license/
