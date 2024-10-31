@@ -18,16 +18,6 @@ permalink: /
     <p class="secondary-text">With this library, you can easily implement common functionalities such as state management, reusable components, and utility functions, which will save you time and improve the quality of your code.</p>
   </div>
 
-  <h3 class="title is-3 has-text-centered secondary-text">Installation</h3>
-
-  <div class="content">
-    <p><strong class="secondary-text">To install the library, run the following command in your terminal:</strong></p>
-    <pre class="custom-box"><code class="primary-text">npm install @custom-craft-software/utils</code></pre>
-    <p class="secondary-text">After installation, you can import the components and utilities you need into your project files. Here’s a quick example:</p>
-    <pre class="custom-box"><code class="primary-text">import { Button, useFetch } from '@custom-craft-software/utils';</code></pre>
-    <p class="secondary-text">Make sure to check the specific documentation for each component or utility for detailed usage instructions.</p>
-  </div>
-
   <h3 class="title is-3 has-text-centered secondary-text">Documentation Sections</h3>
 
   <div class="content">
